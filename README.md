@@ -6,6 +6,9 @@ Celem projektu jest zaprojektowanie i realizacja układu będącego portem szere
 ## Narzędzia
 Projekt zostanie zrealizowany przy pomocy języka `VHDL` i środowiska _Xilinx ISE_. Dodatkowo wykorzystane zostaną materiały pomocnicze znajdujące się na stronie [prowadzącego projektu](http://indyk.ict.pwr.wroc.pl/ucyfr/fpga/) oraz [instrukcji płyty spartan](https://docs.xilinx.com/v/u/en-US/ug230).
 
+## Materiały
+* [RS232 - Wikibooks](https://en.wikibooks.org/wiki/Serial_Programming/RS-232_Connections#Signal_Bits)
+
 ## Zadania
 - [ ] Zapoznanie się z protokołem _RS232_
 - [ ] Zaprojektowanie maszyny stanów będącej nadajnikiem _RS232_. Na zbiór stanów składać się mają: _stan bezczynności_, _stan nadawania_.
