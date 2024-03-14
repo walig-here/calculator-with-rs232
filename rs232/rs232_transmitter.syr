@@ -1,0 +1,461 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> Reading design: rs232_transmitter.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "rs232_transmitter.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "rs232_transmitter"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : rs232_transmitter
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd" in Library work.
+Architecture behavioral of Entity divider_50mhz_to_115200hz is up to date.
+Compiling vhdl file "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd" in Library work.
+Architecture behavioral of Entity modulo10_counter is up to date.
+Compiling vhdl file "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd" in Library work.
+Entity <rs232_transmitter> compiled.
+Entity <rs232_transmitter> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <rs232_transmitter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <modulo10_counter> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <divider_50MHz_to_115200Hz> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <rs232_transmitter> in library <work> (Architecture <behavioral>).
+Entity <rs232_transmitter> analyzed. Unit <rs232_transmitter> generated.
+
+Analyzing Entity <modulo10_counter> in library <work> (Architecture <behavioral>).
+Entity <modulo10_counter> analyzed. Unit <modulo10_counter> generated.
+
+Analyzing Entity <divider_50MHz_to_115200Hz> in library <work> (Architecture <behavioral>).
+Entity <divider_50MHz_to_115200Hz> analyzed. Unit <divider_50MHz_to_115200Hz> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <divider_50MHz_to_115200Hz>.
+    Related source file is "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd".
+    Found 16-bit register for signal <ticks_counter>.
+    Found 15-bit adder for signal <ticks_counter_14_0$add0000> created at line 59.
+    Found 15-bit comparator greater for signal <ticks_counter_15$cmp_gt0000> created at line 56.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+Unit <divider_50MHz_to_115200Hz> synthesized.
+
+
+Synthesizing Unit <modulo10_counter>.
+    Related source file is "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd".
+    Found 4-bit up counter for signal <i>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <modulo10_counter> synthesized.
+
+
+Synthesizing Unit <rs232_transmitter>.
+    Related source file is "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd".
+    Found 1-bit register for signal <current_state<0>>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <rs232_transmitter> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 15-bit adder                                          : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 17
+ 1-bit register                                        : 17
+# Comparators                                          : 1
+ 15-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 15-bit adder                                          : 1
+# Counters                                             : 1
+ 4-bit up counter                                      : 1
+# Registers                                            : 17
+ Flip-Flops                                            : 17
+# Comparators                                          : 1
+ 15-bit comparator greater                             : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <rs232_transmitter> ...
+
+Optimizing unit <divider_50MHz_to_115200Hz> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block rs232_transmitter, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 21
+ Flip-Flops                                            : 21
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : rs232_transmitter.ngr
+Top Level Output File Name         : rs232_transmitter
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 13
+
+Cell Usage :
+# BELS                             : 71
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 11
+#      LUT2                        : 2
+#      LUT3                        : 3
+#      LUT4                        : 4
+#      MUXCY                       : 21
+#      MUXF5                       : 2
+#      VCC                         : 1
+#      XORCY                       : 15
+# FlipFlops/Latches                : 21
+#      FDC                         : 4
+#      FDR                         : 16
+#      FDSE                        : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 4
+#      IBUF                        : 2
+#      OBUF                        : 2
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       17  out of   4656     0%  
+ Number of Slice Flip Flops:             21  out of   9312     0%  
+ Number of 4 input LUTs:                 31  out of   9312     0%  
+ Number of IOs:                          13
+ Number of bonded IOBs:                   5  out of    232     2%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 17    |
+counter/divider/ticks_counter_15   | NONE(counter/i_0)      | 4     |
+-----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+busy_inv(busy_inv1_INV_0:O)        | NONE(counter/i_0)      | 4     |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.234ns (Maximum Frequency: 191.058MHz)
+   Minimum input arrival time before clock: 2.549ns
+   Maximum output required time after clock: 6.056ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 5.234ns (frequency: 191.058MHz)
+  Total number of paths / destination ports: 153 / 34
+-------------------------------------------------------------------------
+Delay:               5.234ns (Levels of Logic = 9)
+  Source:            counter/divider/ticks_counter_0 (FF)
+  Destination:       counter/divider/ticks_counter_15 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: counter/divider/ticks_counter_0 to counter/divider/ticks_counter_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.591   0.622  counter/divider/ticks_counter_0 (counter/divider/ticks_counter_0)
+     LUT3:I0->O            1   0.704   0.000  counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_lut<0> (counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<0> (counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<1> (counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<2> (counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<3> (counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<4> (counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<5> (counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<5>)
+     MUXCY:CI->O           1   0.459   0.420  counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<6> (counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<6>)
+     INV:I->O              1   0.704   0.420  counter/divider/Mcompar_ticks_counter_15_cmp_gt0000_cy<6>_inv_INV_0 (counter/divider/ticks_counter_15_cmp_gt0000)
+     FDSE:CE                   0.555          counter/divider/ticks_counter_15
+    ----------------------------------------
+    Total                      5.234ns (3.772ns logic, 1.462ns route)
+                                       (72.1% logic, 27.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'counter/divider/ticks_counter_15'
+  Clock period: 2.692ns (frequency: 371.471MHz)
+  Total number of paths / destination ports: 10 / 4
+-------------------------------------------------------------------------
+Delay:               2.692ns (Levels of Logic = 1)
+  Source:            counter/i_0 (FF)
+  Destination:       counter/i_0 (FF)
+  Source Clock:      counter/divider/ticks_counter_15 rising
+  Destination Clock: counter/divider/ticks_counter_15 rising
+
+  Data Path: counter/i_0 to counter/i_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.591   0.669  counter/i_0 (counter/i_0)
+     INV:I->O              1   0.704   0.420  counter/Mcount_i_xor<0>11_INV_0 (Result<0>)
+     FDC:D                     0.308          counter/i_0
+    ----------------------------------------
+    Total                      2.692ns (1.603ns logic, 1.089ns route)
+                                       (59.5% logic, 40.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              2.549ns (Levels of Logic = 1)
+  Source:            reset (PAD)
+  Destination:       current_state_0 (FF)
+  Destination Clock: clock rising
+
+  Data Path: reset to current_state_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.218   0.420  reset_IBUF (reset_IBUF)
+     FDR:R                     0.911          current_state_0
+    ----------------------------------------
+    Total                      2.549ns (2.129ns logic, 0.420ns route)
+                                       (83.5% logic, 16.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'counter/divider/ticks_counter_15'
+  Total number of paths / destination ports: 4 / 1
+-------------------------------------------------------------------------
+Offset:              6.056ns (Levels of Logic = 3)
+  Source:            counter/i_0 (FF)
+  Destination:       data_out (PAD)
+  Source Clock:      counter/divider/ticks_counter_15 rising
+
+  Data Path: counter/i_0 to data_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.591   0.748  counter/i_0 (counter/i_0)
+     LUT4:I1->O            1   0.704   0.000  data_out1 (data_out1)
+     MUXF5:I1->O           1   0.321   0.420  data_out_f5 (data_out_OBUF)
+     OBUF:I->O                 3.272          data_out_OBUF (data_out)
+    ----------------------------------------
+    Total                      6.056ns (4.888ns logic, 1.168ns route)
+                                       (80.7% logic, 19.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              5.609ns (Levels of Logic = 2)
+  Source:            current_state_0 (FF)
+  Destination:       data_out (PAD)
+  Source Clock:      clock rising
+
+  Data Path: current_state_0 to data_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.591   0.587  current_state_0 (current_state_0)
+     MUXF5:S->O            1   0.739   0.420  data_out_f5 (data_out_OBUF)
+     OBUF:I->O                 3.272          data_out_OBUF (data_out)
+    ----------------------------------------
+    Total                      5.609ns (4.602ns logic, 1.007ns route)
+                                       (82.0% logic, 18.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.56 secs
+ 
+--> 
+
+Total memory usage is 4514160 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

@@ -1,0 +1,30 @@
+Command line:
+   test_rs232_transmitter_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53928
+
+Thu Mar 14 22:40:22 2024
+
+
+ Elaboration Time: 0.015625 sec
+
+ Current Memory Usage: 5150.65 Meg
+
+ Total Signals          : 26
+ Total Nets             : 51
+ Total Signal Drivers   : 14
+ Total Blocks           : 6
+ Total Primitive Blocks : 3
+ Total Processes        : 12
+ Total Traceable Variables  : 21
+ Total Scalar Nets and Variables : 623
+Total Line Count : 64
+Total Line Count : 64
+
+ Total Simulation Time: 0.234375 sec
+
+ Current Memory Usage: 5465.22 Meg
+
+Thu Mar 14 22:41:12 2024
+

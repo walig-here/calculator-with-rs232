@@ -45,14 +45,13 @@ architecture Behavioral of rs232_transmitter is
 	signal current_state : state;
 	signal next_state : state;
 	
-	signal data_register : STD_LOGIC_VECTOR (9 downto 0);
-	signal clock_enable : STD_LOGIC;
-	signal bits_sent: STD_LOGIC_VECTOR (9 downto 0);
+	signal data_register : STD_LOGIC_VECTOR (9 downto 0) := (others => '0');
+	signal enable_counter : STD_LOGIC;
+	signal transmitted_bit: STD_LOGIC_VECTOR (3 downto 0);
 	
 	component modulo10_counter is
 		port(
 			clock : in  STD_LOGIC;
-         reset : in  STD_LOGIC;
 			clock_enable : in STD_LOGIC;
          out_data : out  STD_LOGIC_VECTOR (3 downto 0)
 		);
@@ -63,13 +62,12 @@ begin
 	-- instancja licznika
 	counter: modulo10_counter port map (
 		clock=>clock,
-		reset=>reset,
-		clock_enable=>clock_enable,
-		out_data=>bits_sent
+		clock_enable=>enable_counter,
+		out_data=>transmitted_bit
 	);
 	
-	-- clock enable
-	with current_state select clock_enable <=
+	-- enable_counter
+	with current_state select enable_counter <=
 		'1' when active,
 		'0' when idle;
 
@@ -77,11 +75,6 @@ begin
 	with current_state select busy <=
 		'1' when active,
 		'0' when idle;
-	
-	-- data_out
-	with current_state select data_out <=
-		'1' when idle,
-		data_register(0) when active;
 		
 	-- current_state
 	process(clock) begin
@@ -95,7 +88,7 @@ begin
 	end process;
 	
 	-- next_state
-	process (current_state, start, bits_sent) begin
+	process (current_state, start, transmitted_bit) begin
 		next_state <= current_state;
 		case current_state is
 				-- stan bezczynnoœci
@@ -106,24 +99,39 @@ begin
 				-- stan aktywny
 				when active =>
 					-- gdy wys³aliœmy wszystkie bity w ramce, to wracamy do stanu nieaktywnoœci
-					if bits_sent = "1001" then
+					if transmitted_bit = "1010" then
 						next_state <= idle;
 					end if;
 		end case;
 	end process;
 	
 	-- data_register
-	process(bits_sent,current_state) begin
+	process(transmitted_bit, current_state, data_in) begin
 		if current_state = active then
-			case bits_sent is
-				-- wys³ano 0 bitów
+			case transmitted_bit is
 				when "0000" =>
-					data_register <= "0" & data_input & "1";
-				-- wys³ano 9 bitów
+					data_register <= "1" & data_in & "0";
 				when others =>
-					data_register 
+					data_register <= "1" & data_register(9 downto 1);
 			end case;
+		else
+			data_register <= (others => '1');
 		end if;
+	end process;
+	
+	-- data_out
+	process (current_state, transmitted_bit, data_register) begin
+		case current_state is
+			when idle =>
+				data_out <= '1';
+			when active =>
+				case transmitted_bit is
+					when "0000" =>
+						data_out <= '0';
+					when others =>
+						data_out <= data_register(0);
+				end case;
+		end case;
 	end process;
 		
 end Behavioral;

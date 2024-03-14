@@ -1,0 +1,9 @@
+[Inputs]
+start
+reset
+clock
+=data_in[7:0]=
+[Outputs]
+data_out
+busy
+[BiDir]

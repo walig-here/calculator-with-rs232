@@ -1,0 +1,3 @@
+MODULE rs23_transmitter_2_implementacja
+	SUBMODULE rs232_transmitter
+		INSTANCE XLXI_1

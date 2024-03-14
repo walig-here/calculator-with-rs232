@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -o "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/test_rs232_transmitter_isim_beh.exe" -prj "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/test_rs232_transmitter_beh.prj" "work.test_rs232_transmitter" 
