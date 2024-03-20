@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/test_divider50MHz_to_115200Hz_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="test_divider50mhz_to_115200hz" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/test_divider50mhz_to_115200hz/clock_50mhz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock_50mhz</obj_property>
+      <obj_property name="ObjectShortName">clock_50mhz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_divider50mhz_to_115200hz/enable" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enable</obj_property>
+      <obj_property name="ObjectShortName">enable</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_divider50mhz_to_115200hz/clock_115200hz" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock_115200hz</obj_property>
+      <obj_property name="ObjectShortName">clock_115200hz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_divider50mhz_to_115200hz/uut/ticks_counter" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ticks_counter[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ticks_counter[15:0]</obj_property>
+   </wvobject>
+</wave_config>

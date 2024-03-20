@@ -42,7 +42,6 @@ ARCHITECTURE behavior OF test_modulo10_counter IS
     COMPONENT modulo10_counter
     PORT(
          clock : IN  std_logic;
-         reset : IN  std_logic;
          clock_enable : IN  std_logic;
          out_data : OUT  std_logic_vector(3 downto 0)
         );
@@ -51,22 +50,19 @@ ARCHITECTURE behavior OF test_modulo10_counter IS
 
    --Inputs
    signal clock : std_logic := '0';
-   signal reset : std_logic := '0';
    signal clock_enable : std_logic := '0';
 
  	--Outputs
    signal out_data : std_logic_vector(3 downto 0);
 
    -- Clock period definitions
-   constant clock_period : time := 20 ns;
-   constant baud_period : time := 8690 ns;
+   constant clock_period : time := 8690 ns;
  
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
    uut: modulo10_counter PORT MAP (
           clock => clock,
-          reset => reset,
           clock_enable => clock_enable,
           out_data => out_data
         );
@@ -84,20 +80,16 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin	
-		wait for baud_period * 3/4;
+		wait for clock_period * 3/4;
 		clock_enable <= '1';
 	
-		-- przejœcie 2 razy przez ca³¹ sekcjencjê licznika i wy³¹czenie odliczania
-		wait for baud_period * 12;
+		-- przejœcie 1.5 razy przez ca³¹ sekcjencjê licznika i zatrzymanie odliczania
+		wait for clock_period * 24.25 + 2 ns;
 		clock_enable <= '0';
 		
-		-- odczekanie chwilê w stanie bez odliczania i reset
-		wait for baud_period * 2;
+		-- odczekanie chwilê w stanie bez odliczania
+		wait for clock_period * 5;
 		clock_enable <= '1';
-		
-		-- test resetu
-		wait for baud_period;
-		reset <= '1', '0' after baud_period;
 		
       wait;
    end process;

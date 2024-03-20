@@ -45,9 +45,10 @@ architecture Behavioral of rs232_transmitter is
 	signal current_state : state;
 	signal next_state : state;
 	
-	signal data_register : STD_LOGIC_VECTOR (9 downto 0) := (others => '0');
-	signal enable_counter : STD_LOGIC;
+	signal data_register : STD_LOGIC_VECTOR (8 downto 0) := (others => '1');
+	signal internal_busy : STD_LOGIC;
 	signal transmitted_bit: STD_LOGIC_VECTOR (3 downto 0);
+	signal baud_clock : STD_LOGIC;
 	
 	component modulo10_counter is
 		port(
@@ -56,25 +57,38 @@ architecture Behavioral of rs232_transmitter is
          out_data : out  STD_LOGIC_VECTOR (3 downto 0)
 		);
 	end component;
+	
+	component divider_50MHz_to_115200Hz is
+		port ( 
+			clock_50MHz : in  STD_LOGIC;
+			enable : in STD_LOGIC;
+			clock_115200Hz : out  STD_LOGIC
+		);
+	end component;
 
 begin
 
 	-- instancja licznika
 	counter: modulo10_counter port map (
-		clock=>clock,
-		clock_enable=>enable_counter,
+		clock=>baud_clock,
+		clock_enable=>internal_busy,
 		out_data=>transmitted_bit
 	);
 	
-	-- enable_counter
-	with current_state select enable_counter <=
+	-- instancja dzielnika zegara
+	clock_divider: divider_50MHz_to_115200Hz port map (
+		clock_50MHz=>clock,
+		enable=>internal_busy,
+		clock_115200Hz=>baud_clock
+	);
+	
+	-- internal_busy
+	with current_state select internal_busy <=
 		'1' when active,
 		'0' when idle;
 
 	-- busy
-	with current_state select busy <=
-		'1' when active,
-		'0' when idle;
+	busy <= internal_busy;
 		
 	-- current_state
 	process(clock) begin
@@ -106,33 +120,20 @@ begin
 	end process;
 	
 	-- data_register
-	process(transmitted_bit, current_state, data_in) begin
-		if current_state = active then
-			case transmitted_bit is
-				when "0000" =>
-					data_register <= "1" & data_in & "0";
-				when others =>
-					data_register <= "1" & data_register(9 downto 1);
-			end case;
-		else
+	process(start, internal_busy, baud_clock, reset, data_in) begin
+		if reset = '1' then
 			data_register <= (others => '1');
+		elsif start = '1' and internal_busy = '0' then
+			data_register <= data_in & '0';
+		elsif rising_edge(baud_clock) then
+			data_register <= '1' & data_register(8 downto 1);
+		else
+			data_register <= data_register;
 		end if;
 	end process;
 	
 	-- data_out
-	process (current_state, transmitted_bit, data_register) begin
-		case current_state is
-			when idle =>
-				data_out <= '1';
-			when active =>
-				case transmitted_bit is
-					when "0000" =>
-						data_out <= '0';
-					when others =>
-						data_out <= data_register(0);
-				end case;
-		end case;
-	end process;
+	data_out <= data_register(0);
 		
 end Behavioral;
 

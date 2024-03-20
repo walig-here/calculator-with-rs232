@@ -39,7 +39,7 @@ end divider_50MHz_to_115200Hz;
 
 architecture Behavioral of divider_50MHz_to_115200Hz is
 
-	signal ticks_counter : UNSIGNED(15 downto 0) := (others => '0');
+	signal ticks_counter : UNSIGNED(15 downto 0) := ('1', others => '0');
 	constant increment : UNSIGNED(7 downto 0) := x"97";
 	constant counter_max : UNSIGNED(14 downto 0) := (others => '1');
 	
@@ -50,8 +50,7 @@ begin
 	begin
 		if rising_edge(clock_50MHz) then
 			if enable = '0' then
-				ticks_counter(14 downto 0) <= (others => '0');
-				ticks_counter(15) <= '1';
+				ticks_counter <= ('1', others => '0');
 			else
 				if ticks_counter(14 downto 0) > counter_max - increment then
 					ticks_counter(15) <= not ticks_counter(15);

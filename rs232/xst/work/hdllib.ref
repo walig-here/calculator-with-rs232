@@ -1,6 +1,8 @@
-AR modulo10_counter behavioral D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd sub00/vhpl01 1710451732
-EN rs232_transmitter NULL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd sub00/vhpl02 1710451733
-AR rs232_transmitter behavioral D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd sub00/vhpl05 1710451734
-AR divider_50mhz_to_115200hz behavioral D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd sub00/vhpl04 1710451730
-EN divider_50mhz_to_115200hz NULL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd sub00/vhpl03 1710451729
-EN modulo10_counter NULL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd sub00/vhpl00 1710451731
+AR modulo10_counter behavioral D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd sub00/vhpl01 1710943373
+EN rs232_transmitter NULL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd sub00/vhpl02 1710943376
+AR rs232_transmitter behavioral D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd sub00/vhpl05 1710943377
+AR divider_50mhz_to_115200hz behavioral D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd sub00/vhpl04 1710943375
+EN divider_50mhz_to_115200hz NULL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd sub00/vhpl03 1710943374
+EN shift_register_in10b_out1b NULL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/shift_register_in10b_out1b.vhd sub00/vhpl06 1710935246
+AR shift_register_in10b_out1b behavioral D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/shift_register_in10b_out1b.vhd sub00/vhpl07 1710935247
+EN modulo10_counter NULL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd sub00/vhpl00 1710943372

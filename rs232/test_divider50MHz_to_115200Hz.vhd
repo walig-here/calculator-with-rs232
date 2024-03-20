@@ -57,6 +57,7 @@ ARCHITECTURE behavior OF test_divider50MHz_to_115200Hz IS
 
    -- Clock period definitions
    constant clock_50MHz_period : time := 20 ns;
+   constant clock_115200Hz_period : time := 8690 ns;
  
 BEGIN
  
@@ -80,7 +81,7 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin
-		enable <= '0' after 400 * clock_50MHz_period, '1' after 800 * clock_50MHz_period;
+		enable <= '0' after 3.25 * clock_115200Hz_period , '1' after 5.25 * clock_115200Hz_period ;
       wait;
    end process;
 

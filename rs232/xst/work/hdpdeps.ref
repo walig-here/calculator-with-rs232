@@ -1,22 +1,30 @@
-V3 11
-FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd 2024/03/14.19:40:44 P.20131013
-EN work/divider_50MHz_to_115200Hz 1710451729 \
+V3 14
+FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd 2024/03/20.15:00:42 P.20131013
+EN work/divider_50MHz_to_115200Hz 1710943374 \
       FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/divider_50MHz_to_115200Hz/Behavioral 1710451730 \
+AR work/divider_50MHz_to_115200Hz/Behavioral 1710943375 \
       FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd \
-      EN work/divider_50MHz_to_115200Hz 1710451729
-FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd 2024/03/14.22:21:00 P.20131013
-EN work/modulo10_counter 1710451731 \
+      EN work/divider_50MHz_to_115200Hz 1710943374
+FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd 2024/03/20.14:08:00 P.20131013
+EN work/modulo10_counter 1710943372 \
       FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/modulo10_counter/Behavioral 1710451732 \
+AR work/modulo10_counter/Behavioral 1710943373 \
       FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd \
-      EN work/modulo10_counter 1710451731 CP divider_50MHz_to_115200Hz
-FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd 2024/03/14.22:25:02 P.20131013
-EN work/rs232_transmitter 1710451733 \
+      EN work/modulo10_counter 1710943372
+FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd 2024/03/20.14:56:57 P.20131013
+EN work/rs232_transmitter 1710943376 \
       FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/rs232_transmitter/Behavioral 1710451734 \
+AR work/rs232_transmitter/Behavioral 1710943377 \
       FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd \
-      EN work/rs232_transmitter 1710451733 CP modulo10_counter
+      EN work/rs232_transmitter 1710943376 CP modulo10_counter \
+      CP divider_50MHz_to_115200Hz
+FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/shift_register_in10b_out1b.vhd 2024/03/20.12:45:12 P.20131013
+EN work/shift_register_in10b_out1b 1710935246 \
+      FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/shift_register_in10b_out1b.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/shift_register_in10b_out1b/Behavioral 1710935247 \
+      FL D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/shift_register_in10b_out1b.vhd \
+      EN work/shift_register_in10b_out1b 1710935246

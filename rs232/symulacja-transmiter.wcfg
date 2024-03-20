@@ -11,7 +11,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="11" />
+   <WVObjectSize size="12" />
    <wvobject fp_name="/test_rs232_transmitter/data_in" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">data_in[7:0]</obj_property>
       <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
@@ -44,16 +44,20 @@
       <obj_property name="ElementShortName">next_state</obj_property>
       <obj_property name="ObjectShortName">next_state</obj_property>
    </wvobject>
-   <wvobject fp_name="/test_rs232_transmitter/uut/enable_counter" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">enable_counter</obj_property>
-      <obj_property name="ObjectShortName">enable_counter</obj_property>
-   </wvobject>
-   <wvobject fp_name="/test_rs232_transmitter/uut/counter/baud_clock" type="logic" db_ref_id="1">
-      <obj_property name="ElementShortName">baud_clock</obj_property>
-      <obj_property name="ObjectShortName">baud_clock</obj_property>
-   </wvobject>
    <wvobject fp_name="/test_rs232_transmitter/uut/transmitted_bit" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">transmitted_bit[3:0]</obj_property>
       <obj_property name="ObjectShortName">transmitted_bit[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_rs232_transmitter/uut/data_register" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data_register[8:0]</obj_property>
+      <obj_property name="ObjectShortName">data_register[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_rs232_transmitter/uut/internal_busy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">internal_busy</obj_property>
+      <obj_property name="ObjectShortName">internal_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_rs232_transmitter/uut/baud_clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">baud_clock</obj_property>
+      <obj_property name="ObjectShortName">baud_clock</obj_property>
    </wvobject>
 </wave_config>

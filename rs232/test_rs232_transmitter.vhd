@@ -108,7 +108,7 @@ BEGIN
 		-- 1) Nadawanie wiadomoœci sekwencji
 		for i in test_message'RANGE loop
 			start <= '1', '0' after 2 * baud_period;
-			data_in <= STD_LOGIC_VECTOR(test_message(i));
+			data_in <= STD_LOGIC_VECTOR(test_message(i)), (others => '0') after 0.25 * baud_period;
 			wait until busy = '0';
 			wait for 2 ns;
 		end loop;
@@ -124,14 +124,14 @@ BEGIN
 	
 		-- 3) Nadanie bajtu 1, ale wciœniêcie resetu w trakcie transmisji
 		start <= '1', '0' after 2 * baud_period;
-		data_in <= STD_LOGIC_VECTOR(test_byte_1);
+		data_in <= STD_LOGIC_VECTOR(test_byte_1), (others => '0') after 0.25 * baud_period;
 		reset <= '1' after 4 * baud_period, '0' after 4.5 * baud_period;
 		
 		
 		-- 4) Nadanie bajtu 2
 		wait until busy = '0' and reset = '0';
 		start <= '1' after 2 ns, '0' after 2 * baud_period + 2 ns;
-		data_in <= STD_LOGIC_VECTOR(test_byte_2);
+		data_in <= STD_LOGIC_VECTOR(test_byte_2), (others => '0') after 0.25 * baud_period;
 		
 		-- 5) Przerwa w nadawaniu
 		wait until busy = '0';
@@ -139,7 +139,7 @@ BEGIN
 		
 		-- 6) Nadanie bajtu 6
 		start <= '1', '0' after 2 * baud_period;
-		data_in <= STD_LOGIC_VECTOR(test_byte_3);
+		data_in <= STD_LOGIC_VECTOR(test_byte_3), (others => '0') after 0.25 * baud_period;
 		
       wait;
    end process;
