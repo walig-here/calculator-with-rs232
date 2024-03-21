@@ -10,5 +10,7 @@ Projekt zostanie zrealizowany przy pomocy języka `VHDL` i środowiska _Xilinx I
 * [RS232 - Wikibooks](https://en.wikibooks.org/wiki/Serial_Programming/RS-232_Connections#Signal_Bits)
 
 ## Zadania
-- [ ] Zapoznanie się z protokołem _RS232_
-- [ ] Zaprojektowanie maszyny stanów będącej nadajnikiem _RS232_. Na zbiór stanów składać się mają: _stan bezczynności_, _stan nadawania_.
+- [x] Zapoznanie się z protokołem _RS232_
+- [x] Zaprojektowanie maszyny stanów będącej nadajnikiem _RS232_. Na zbiór stanów składać się mają: _stan bezczynności_, _stan nadawania_.
+- [ ] Symulacja zaprojektowanego nadajnika
+- [ ] Przetesowanie działania na płytce
