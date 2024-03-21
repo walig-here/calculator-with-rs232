@@ -12,5 +12,8 @@ Projekt zostanie zrealizowany przy pomocy języka `VHDL` i środowiska _Xilinx I
 ## Zadania
 - [x] Zapoznanie się z protokołem _RS232_
 - [x] Zaprojektowanie maszyny stanów będącej nadajnikiem _RS232_. Na zbiór stanów składać się mają: _stan bezczynności_, _stan nadawania_.
-- [ ] Symulacja zaprojektowanego nadajnika
-- [ ] Przetesowanie działania na płytce
+- [x] Symulacja zaprojektowanego nadajnika
+- [x] Przetesowanie działania na płytce
+- [ ] Zaprojektowanie maszyny stanów będącej odbiornikiem _RS232_. Powinien on wyłapać **bit startu**, a następnie przy pomocy licznika modulo próbkować kolejne bity ramki.
+- [ ] Symulacja zaprojektowanego odbiornika.
+- [ ] Przetestowanie działania odbiornika na płytce.
