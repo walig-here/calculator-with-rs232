@@ -15,5 +15,10 @@ Projekt zostanie zrealizowany przy pomocy języka `VHDL` i środowiska _Xilinx I
 - [x] Symulacja zaprojektowanego nadajnika
 - [x] Przetesowanie działania na płytce
 - [x] Zaprojektowanie maszyny stanów będącej odbiornikiem _RS232_. Powinien on wyłapać **bit startu**, a następnie przy pomocy licznika modulo próbkować kolejne bity ramki.
-- [ ] Symulacja zaprojektowanego odbiornika.
-- [ ] Przetestowanie działania odbiornika na płytce.
+- [x] Symulacja zaprojektowanego odbiornika.
+- [x] Przetestowanie działania odbiornika na płytce.
+- [ ] Zaprojektowanie maszyny stanów będącej prostym kalkulatorem 3-cyfrowych liczb heksadecymalnych. Na płytkę przez port RS232 nadawane są kolejno: argument 1, operator, agrument 2. Po przesłaniu `ENTER` na port RS232 ma zostać wysłany wynik działania.
+  - [ ] Dodawanie
+  - [ ] Odejmowanie
+- [ ] Symulacja zaprojektowanego kalkulatora.
+- [ ] Przetestowanie działania kalkulatora na płytce.
