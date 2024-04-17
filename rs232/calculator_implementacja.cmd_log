@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.syr" 

@@ -1,0 +1,7 @@
+vhdl work "C:\Users\Dawid\Desktop\calculator-with-rs232\rs232\register_12_synchronized.vhd"
+vhdl work "C:\Users\Dawid\Desktop\calculator-with-rs232\rs232\modulo10_counter.vhd"
+vhdl work "C:\Users\Dawid\Desktop\calculator-with-rs232\rs232\divider_50MHz_to_115200Hz.vhd"
+vhdl work "C:\Users\Dawid\Desktop\calculator-with-rs232\rs232\ascii_to_calc_symbol.vhd"
+vhdl work "C:\Users\Dawid\Desktop\calculator-with-rs232\rs232\rs232_receiver.vhd"
+vhdl work "C:\Users\Dawid\Desktop\calculator-with-rs232\rs232\calculator.vhd"
+vhdl work "C:\Users\Dawid\Desktop\calculator-with-rs232\rs232\calculator_implementacja.vhf"

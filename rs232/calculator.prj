@@ -1,0 +1,3 @@
+vhdl work "register_12_synchronized.vhd"
+vhdl work "ascii_to_calc_symbol.vhd"
+vhdl work "calculator.vhd"

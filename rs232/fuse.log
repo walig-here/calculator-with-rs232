@@ -1,23 +1,33 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -o D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/test_rs232_transmitter_isim_beh.exe -prj D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/test_rs232_transmitter_beh.prj work.test_rs232_transmitter 
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -o "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja_calculator_implementacja_sch_tb_isim_beh.exe" -prj "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja_calculator_implementacja_sch_tb_beh.prj" "work.calculator_implementacja_calculator_implementacja_sch_tb" 
 ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 8
-Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/modulo10_counter.vhd" into library work
-Parsing VHDL file "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/divider_50MHz_to_115200Hz.vhd" into library work
-Parsing VHDL file "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/rs232_transmitter.vhd" into library work
-Parsing VHDL file "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/test_rs232_transmitter.vhd" into library work
+Parsing VHDL file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_12_synchronized.vhd" into library work
+Parsing VHDL file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/modulo10_counter.vhd" into library work
+Parsing VHDL file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/divider_50MHz_to_115200Hz.vhd" into library work
+Parsing VHDL file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/ascii_to_calc_symbol.vhd" into library work
+Parsing VHDL file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_receiver.vhd" into library work
+Parsing VHDL file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.vhd" into library work
+Parsing VHDL file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.vhf" into library work
+Parsing VHDL file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/test_receiver_calculator.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
+Compiling package vcomponents
+Compiling architecture behavioral of entity ascii_to_calc_symbol [ascii_to_calc_symbol_default]
+Compiling architecture behavioral of entity register_12_synchronized [register_12_synchronized_default]
+Compiling architecture behavioral of entity calculator [calculator_default]
 Compiling architecture behavioral of entity modulo10_counter [modulo10_counter_default]
 Compiling architecture behavioral of entity divider_50MHz_to_115200Hz [divider_50mhz_to_115200hz_defaul...]
-Compiling architecture behavioral of entity rs232_transmitter [rs232_transmitter_default]
-Compiling architecture behavior of entity test_rs232_transmitter
+Compiling architecture behavioral of entity rs232_receiver [rs232_receiver_default]
+Compiling architecture behavioral of entity calculator_implementacja [calculator_implementacja_default]
+Compiling architecture behavioral of entity calculator_implementacja_calcula...
 Time Resolution for simulation is 1ps.
-Compiled 10 VHDL Units
-Built simulation executable D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/test_rs232_transmitter_isim_beh.exe
-Fuse Memory Usage: 35448 KB
-Fuse CPU Usage: 374 ms
+Waiting for 4 sub-compilation(s) to finish...
+Compiled 19 VHDL Units
+Built simulation executable C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja_calculator_implementacja_sch_tb_isim_beh.exe
+Fuse Memory Usage: 50620 KB
+Fuse CPU Usage: 859 ms

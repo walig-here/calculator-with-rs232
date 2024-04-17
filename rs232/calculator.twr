@@ -1,0 +1,214 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml calculator.twx calculator.ncd -o calculator.twr
+calculator.pcf
+
+Design file:              calculator.ncd
+Physical constraint file: calculator.pcf
+Device,package,speed:     xc3s500e,fg320,-4 (PRODUCTION 1.27 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clock
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+input<0>    |    8.698(R)|    0.253(R)|clock_BUFGP       |   0.000|
+input<1>    |    9.672(R)|    0.556(R)|clock_BUFGP       |   0.000|
+input<2>    |    8.468(R)|    0.524(R)|clock_BUFGP       |   0.000|
+input<3>    |   10.189(R)|   -0.656(R)|clock_BUFGP       |   0.000|
+input<4>    |    9.522(R)|   -0.124(R)|clock_BUFGP       |   0.000|
+input<5>    |    9.411(R)|    0.317(R)|clock_BUFGP       |   0.000|
+input<6>    |    8.471(R)|    0.904(R)|clock_BUFGP       |   0.000|
+input<7>    |    8.802(R)|    0.683(R)|clock_BUFGP       |   0.000|
+read_input  |    4.203(R)|    0.619(R)|clock_BUFGP       |   0.000|
+reset       |    1.812(R)|    1.005(R)|clock_BUFGP       |   0.000|
+result_sent |    3.542(R)|    0.037(R)|clock_BUFGP       |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clock to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+result<0>   |   13.725(R)|clock_BUFGP       |   0.000|
+result<1>   |   13.993(R)|clock_BUFGP       |   0.000|
+result<2>   |   13.910(R)|clock_BUFGP       |   0.000|
+result<3>   |   14.721(R)|clock_BUFGP       |   0.000|
+result<4>   |   13.198(R)|clock_BUFGP       |   0.000|
+result<5>   |   14.743(R)|clock_BUFGP       |   0.000|
+result<6>   |   14.217(R)|clock_BUFGP       |   0.000|
+result<7>   |   14.867(R)|clock_BUFGP       |   0.000|
+result<8>   |   14.326(R)|clock_BUFGP       |   0.000|
+result<9>   |   14.233(R)|clock_BUFGP       |   0.000|
+result<10>  |   14.485(R)|clock_BUFGP       |   0.000|
+result<11>  |   14.150(R)|clock_BUFGP       |   0.000|
+send        |    8.188(R)|clock_BUFGP       |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clock          |    5.207|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+input<0>       |result<0>      |   14.818|
+input<0>       |result<1>      |   15.086|
+input<0>       |result<2>      |   15.003|
+input<0>       |result<3>      |   15.814|
+input<0>       |result<4>      |   14.291|
+input<0>       |result<5>      |   15.836|
+input<0>       |result<6>      |   15.307|
+input<0>       |result<7>      |   15.957|
+input<0>       |result<8>      |   15.416|
+input<0>       |result<9>      |   15.323|
+input<0>       |result<10>     |   15.573|
+input<0>       |result<11>     |   15.238|
+input<1>       |result<0>      |   15.451|
+input<1>       |result<1>      |   15.719|
+input<1>       |result<2>      |   15.636|
+input<1>       |result<3>      |   16.447|
+input<1>       |result<4>      |   14.924|
+input<1>       |result<5>      |   16.469|
+input<1>       |result<6>      |   15.940|
+input<1>       |result<7>      |   16.590|
+input<1>       |result<8>      |   16.049|
+input<1>       |result<9>      |   15.956|
+input<1>       |result<10>     |   16.206|
+input<1>       |result<11>     |   15.871|
+input<2>       |result<0>      |   14.247|
+input<2>       |result<1>      |   14.515|
+input<2>       |result<2>      |   14.432|
+input<2>       |result<3>      |   15.243|
+input<2>       |result<4>      |   13.720|
+input<2>       |result<5>      |   15.265|
+input<2>       |result<6>      |   14.736|
+input<2>       |result<7>      |   15.386|
+input<2>       |result<8>      |   14.845|
+input<2>       |result<9>      |   14.752|
+input<2>       |result<10>     |   15.002|
+input<2>       |result<11>     |   14.667|
+input<3>       |result<0>      |   16.168|
+input<3>       |result<1>      |   16.436|
+input<3>       |result<2>      |   16.353|
+input<3>       |result<3>      |   17.164|
+input<3>       |result<4>      |   15.641|
+input<3>       |result<5>      |   17.186|
+input<3>       |result<6>      |   16.657|
+input<3>       |result<7>      |   17.307|
+input<3>       |result<8>      |   16.766|
+input<3>       |result<9>      |   16.673|
+input<3>       |result<10>     |   16.923|
+input<3>       |result<11>     |   16.588|
+input<4>       |result<0>      |   15.501|
+input<4>       |result<1>      |   15.769|
+input<4>       |result<2>      |   15.686|
+input<4>       |result<3>      |   16.497|
+input<4>       |result<4>      |   14.974|
+input<4>       |result<5>      |   16.519|
+input<4>       |result<6>      |   15.990|
+input<4>       |result<7>      |   16.640|
+input<4>       |result<8>      |   16.099|
+input<4>       |result<9>      |   16.006|
+input<4>       |result<10>     |   16.256|
+input<4>       |result<11>     |   15.921|
+input<5>       |result<0>      |   15.390|
+input<5>       |result<1>      |   15.658|
+input<5>       |result<2>      |   15.575|
+input<5>       |result<3>      |   16.386|
+input<5>       |result<4>      |   14.863|
+input<5>       |result<5>      |   16.408|
+input<5>       |result<6>      |   15.879|
+input<5>       |result<7>      |   16.529|
+input<5>       |result<8>      |   15.988|
+input<5>       |result<9>      |   15.895|
+input<5>       |result<10>     |   16.145|
+input<5>       |result<11>     |   15.810|
+input<6>       |result<0>      |   14.569|
+input<6>       |result<1>      |   14.837|
+input<6>       |result<2>      |   14.754|
+input<6>       |result<3>      |   15.565|
+input<6>       |result<4>      |   14.042|
+input<6>       |result<5>      |   15.587|
+input<6>       |result<6>      |   15.058|
+input<6>       |result<7>      |   15.708|
+input<6>       |result<8>      |   15.167|
+input<6>       |result<9>      |   15.074|
+input<6>       |result<10>     |   15.324|
+input<6>       |result<11>     |   14.989|
+input<7>       |result<0>      |   14.741|
+input<7>       |result<1>      |   15.009|
+input<7>       |result<2>      |   14.926|
+input<7>       |result<3>      |   15.737|
+input<7>       |result<4>      |   14.214|
+input<7>       |result<5>      |   15.759|
+input<7>       |result<6>      |   15.230|
+input<7>       |result<7>      |   15.880|
+input<7>       |result<8>      |   15.339|
+input<7>       |result<9>      |   15.246|
+input<7>       |result<10>     |   15.496|
+input<7>       |result<11>     |   15.161|
+read_input     |result<0>      |   11.678|
+read_input     |result<1>      |   11.946|
+read_input     |result<2>      |   11.863|
+read_input     |result<3>      |   12.674|
+read_input     |result<4>      |   11.151|
+read_input     |result<5>      |   12.696|
+read_input     |result<6>      |   12.167|
+read_input     |result<7>      |   12.817|
+read_input     |result<8>      |   12.276|
+read_input     |result<9>      |   12.183|
+read_input     |result<10>     |   12.433|
+read_input     |result<11>     |   12.098|
+---------------+---------------+---------+
+
+
+Analysis completed Wed Apr 17 20:15:08 2024 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 4509 MB
+
+
+

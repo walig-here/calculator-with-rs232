@@ -1,0 +1,10 @@
+[Inputs]
+read_input
+reset
+result_sent
+clock
+=calc_input[7:0]=
+[Outputs]
+send
+=result[11:0]=
+[BiDir]

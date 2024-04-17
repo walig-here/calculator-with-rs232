@@ -1,4 +1,0 @@
-vhdl work "modulo10_counter.vhd"
-vhdl work "divider_50MHz_to_115200Hz.vhd"
-vhdl work "rs232_transmitter.vhd"
-vhdl work "test_rs232_transmitter.vhd"

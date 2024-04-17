@@ -1,0 +1,472 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
+ 
+--> Reading design: calculator.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "calculator.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "calculator"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : calculator
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/ascii_to_calc_symbol.vhd" in Library work.
+Architecture behavioral of Entity ascii_to_calc_symbol is up to date.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_12_synchronized.vhd" in Library work.
+Architecture behavioral of Entity register_12_synchronized is up to date.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.vhd" in Library work.
+Architecture behavioral of Entity calculator is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <calculator> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ascii_to_calc_symbol> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <register_12_synchronized> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <calculator> in library <work> (Architecture <behavioral>).
+Entity <calculator> analyzed. Unit <calculator> generated.
+
+Analyzing Entity <ascii_to_calc_symbol> in library <work> (Architecture <behavioral>).
+Entity <ascii_to_calc_symbol> analyzed. Unit <ascii_to_calc_symbol> generated.
+
+Analyzing Entity <register_12_synchronized> in library <work> (Architecture <behavioral>).
+Entity <register_12_synchronized> analyzed. Unit <register_12_synchronized> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <ascii_to_calc_symbol>.
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/ascii_to_calc_symbol.vhd".
+Unit <ascii_to_calc_symbol> synthesized.
+
+
+Synthesizing Unit <register_12_synchronized>.
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_12_synchronized.vhd".
+    Found 12-bit register for signal <data_register>.
+    Summary:
+	inferred  12 D-type flip-flop(s).
+Unit <register_12_synchronized> synthesized.
+
+
+Synthesizing Unit <calculator>.
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.vhd".
+    Found finite state machine <FSM_0> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 5                                              |
+    | Transitions        | 22                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 6                                              |
+    | Clock              | clock                     (rising_edge)        |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 12-bit addsub for signal <result_register$addsub0000>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 Adder/Subtractor(s).
+Unit <calculator> synthesized.
+
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 12-bit addsub                                         : 1
+# Registers                                            : 2
+ 12-bit register                                       : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <current_state/FSM> on signal <current_state[1:3]> with gray encoding.
+------------------------
+ State      | Encoding
+------------------------
+ idle       | 000
+ argument_1 | 001
+ operator   | 011
+ argument_2 | 010
+ sending    | 110
+------------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+# Adders/Subtractors                                   : 1
+ 12-bit addsub                                         : 1
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <calculator> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block calculator, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 27
+ Flip-Flops                                            : 27
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : calculator.ngr
+Top Level Output File Name         : calculator
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 25
+
+Cell Usage :
+# BELS                             : 92
+#      GND                         : 1
+#      LUT2                        : 3
+#      LUT3                        : 22
+#      LUT4                        : 38
+#      MUXCY                       : 11
+#      MUXF5                       : 5
+#      XORCY                       : 12
+# FlipFlops/Latches                : 27
+#      FDR                         : 3
+#      FDRE                        : 24
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 24
+#      IBUF                        : 11
+#      OBUF                        : 13
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       35  out of   4656     0%  
+ Number of Slice Flip Flops:             27  out of   9312     0%  
+ Number of 4 input LUTs:                 63  out of   9312     0%  
+ Number of IOs:                          25
+ Number of bonded IOBs:                  25  out of    232    10%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 27    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.844ns (Maximum Frequency: 146.113MHz)
+   Minimum input arrival time before clock: 14.242ns
+   Maximum output required time after clock: 11.013ns
+   Maximum combinational path delay: 16.220ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 6.844ns (frequency: 146.113MHz)
+  Total number of paths / destination ports: 266 / 67
+-------------------------------------------------------------------------
+Delay:               6.844ns (Levels of Logic = 3)
+  Source:            current_state_FSM_FFd3 (FF)
+  Destination:       input_register_2/data_register_11 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: current_state_FSM_FFd3 to input_register_2/data_register_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             18   0.591   1.072  current_state_FSM_FFd3 (current_state_FSM_FFd3)
+     LUT4:I3->O            1   0.704   0.455  current_state_FSM_FFd2-In14 (current_state_FSM_FFd2-In14)
+     LUT4:I2->O            2   0.704   0.451  current_state_FSM_FFd2-In32 (current_state_FSM_FFd2-In)
+     LUT4:I3->O           24   0.704   1.252  reset_registers1 (reset_registers)
+     FDRE:R                    0.911          input_register_2/data_register_0
+    ----------------------------------------
+    Total                      6.844ns (3.614ns logic, 3.230ns route)
+                                       (52.8% logic, 47.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 4497 / 62
+-------------------------------------------------------------------------
+Offset:              14.242ns (Levels of Logic = 10)
+  Source:            calc_input<4> (PAD)
+  Destination:       input_register_2/data_register_11 (FF)
+  Destination Clock: clock rising
+
+  Data Path: calc_input<4> to input_register_2/data_register_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   1.218   1.108  calc_input_4_IBUF (calc_input_4_IBUF)
+     LUT2:I0->O            2   0.704   0.451  input_transcoder/calc_symbol<2>2_SW0 (N27)
+     LUT4:I3->O            4   0.704   0.762  input_transcoder/calc_symbol<2>2 (N7)
+     LUT3:I0->O            1   0.704   0.000  input_transcoder/calc_symbol<0>51_F (N41)
+     MUXF5:I0->O           4   0.321   0.762  input_transcoder/calc_symbol<0>51 (input_symbol<0>)
+     LUT4:I0->O            1   0.704   0.424  current_state_cmp_eq0000_SW0 (N25)
+     LUT4:I3->O            2   0.704   0.526  current_state_cmp_eq0000 (current_state_cmp_eq0000)
+     LUT4:I1->O            1   0.704   0.424  current_state_FSM_FFd2-In22 (current_state_FSM_FFd2-In22)
+     LUT4:I3->O            2   0.704   0.451  current_state_FSM_FFd2-In32 (current_state_FSM_FFd2-In)
+     LUT4:I3->O           24   0.704   1.252  reset_registers1 (reset_registers)
+     FDRE:R                    0.911          input_register_2/data_register_0
+    ----------------------------------------
+    Total                     14.242ns (8.082ns logic, 6.160ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 325 / 13
+-------------------------------------------------------------------------
+Offset:              11.013ns (Levels of Logic = 16)
+  Source:            current_state_FSM_FFd3 (FF)
+  Destination:       result<11> (PAD)
+  Source Clock:      clock rising
+
+  Data Path: current_state_FSM_FFd3 to result<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             18   0.591   1.243  current_state_FSM_FFd3 (current_state_FSM_FFd3)
+     LUT4:I0->O           13   0.704   1.018  result_register_mux00002 (result_register_mux0000)
+     LUT3:I2->O            1   0.704   0.000  Maddsub_result_register_addsub0000_lut<0> (Maddsub_result_register_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Maddsub_result_register_addsub0000_cy<0> (Maddsub_result_register_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<1> (Maddsub_result_register_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<2> (Maddsub_result_register_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<3> (Maddsub_result_register_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<4> (Maddsub_result_register_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<5> (Maddsub_result_register_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<6> (Maddsub_result_register_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<7> (Maddsub_result_register_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<8> (Maddsub_result_register_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<9> (Maddsub_result_register_addsub0000_cy<9>)
+     MUXCY:CI->O           0   0.059   0.000  Maddsub_result_register_addsub0000_cy<10> (Maddsub_result_register_addsub0000_cy<10>)
+     XORCY:CI->O           1   0.804   0.499  Maddsub_result_register_addsub0000_xor<11> (result_register_addsub0000<11>)
+     LUT4:I1->O            1   0.704   0.420  result_register<11>1 (result_11_OBUF)
+     OBUF:I->O                 3.272          result_11_OBUF (result<11>)
+    ----------------------------------------
+    Total                     11.013ns (7.833ns logic, 3.180ns route)
+                                       (71.1% logic, 28.9% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 4104 / 12
+-------------------------------------------------------------------------
+Delay:               16.220ns (Levels of Logic = 21)
+  Source:            calc_input<4> (PAD)
+  Destination:       result<11> (PAD)
+
+  Data Path: calc_input<4> to result<11>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   1.218   1.108  calc_input_4_IBUF (calc_input_4_IBUF)
+     LUT2:I0->O            2   0.704   0.451  input_transcoder/calc_symbol<2>2_SW0 (N27)
+     LUT4:I3->O            4   0.704   0.762  input_transcoder/calc_symbol<2>2 (N7)
+     LUT2:I0->O            1   0.704   0.000  input_transcoder/calc_symbol<1>1002 (input_transcoder/calc_symbol<1>1001)
+     MUXF5:I0->O          16   0.321   1.069  input_transcoder/calc_symbol<1>100_f5 (input_symbol<1>)
+     LUT4:I2->O           13   0.704   1.018  result_register_mux00002 (result_register_mux0000)
+     LUT3:I2->O            1   0.704   0.000  Maddsub_result_register_addsub0000_lut<0> (Maddsub_result_register_addsub0000_lut<0>)
+     MUXCY:S->O            1   0.464   0.000  Maddsub_result_register_addsub0000_cy<0> (Maddsub_result_register_addsub0000_cy<0>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<1> (Maddsub_result_register_addsub0000_cy<1>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<2> (Maddsub_result_register_addsub0000_cy<2>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<3> (Maddsub_result_register_addsub0000_cy<3>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<4> (Maddsub_result_register_addsub0000_cy<4>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<5> (Maddsub_result_register_addsub0000_cy<5>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<6> (Maddsub_result_register_addsub0000_cy<6>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<7> (Maddsub_result_register_addsub0000_cy<7>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<8> (Maddsub_result_register_addsub0000_cy<8>)
+     MUXCY:CI->O           1   0.059   0.000  Maddsub_result_register_addsub0000_cy<9> (Maddsub_result_register_addsub0000_cy<9>)
+     MUXCY:CI->O           0   0.059   0.000  Maddsub_result_register_addsub0000_cy<10> (Maddsub_result_register_addsub0000_cy<10>)
+     XORCY:CI->O           1   0.804   0.499  Maddsub_result_register_addsub0000_xor<11> (result_register_addsub0000<11>)
+     LUT4:I1->O            1   0.704   0.420  result_register<11>1 (result_11_OBUF)
+     OBUF:I->O                 3.272          result_11_OBUF (result<11>)
+    ----------------------------------------
+    Total                     16.220ns (10.893ns logic, 5.327ns route)
+                                       (67.2% logic, 32.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 6.14 secs
+ 
+--> 
+
+Total memory usage is 4513720 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

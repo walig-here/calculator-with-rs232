@@ -1,0 +1,3 @@
+MODULE rs232_receiver_implementacja
+	SUBMODULE rs232_receiver
+		INSTANCE XLXI_1

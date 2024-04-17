@@ -1,3 +1,5 @@
 MODULE rs23_transmitter_2_implementacja
 	SUBMODULE rs232_transmitter
 		INSTANCE XLXI_1
+	SUBMODULE PS2_Rx
+		INSTANCE XLXI_2

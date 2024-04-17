@@ -1,5 +1,0 @@
-set -tmpdir "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/xst/projnav.tmp"
-set -xsthdpdir "D:/Politechnika-Wroclawska/semestr-6/ucisw-2/ucisw-projekt/rs232/xst"
-elaborate
--ifn shift_register_in10b_out1b.prj
--ifmt mixed

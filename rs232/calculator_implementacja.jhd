@@ -1,0 +1,5 @@
+MODULE calculator_implementacja
+	SUBMODULE calculator
+		INSTANCE XLXI_1
+	SUBMODULE rs232_receiver
+		INSTANCE XLXI_2

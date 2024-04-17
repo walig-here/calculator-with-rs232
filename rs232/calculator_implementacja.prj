@@ -1,0 +1,7 @@
+vhdl work "register_12_synchronized.vhd"
+vhdl work "modulo10_counter.vhd"
+vhdl work "divider_50MHz_to_115200Hz.vhd"
+vhdl work "ascii_to_calc_symbol.vhd"
+vhdl work "rs232_receiver.vhd"
+vhdl work "calculator.vhd"
+vhdl work "calculator_implementacja.vhf"

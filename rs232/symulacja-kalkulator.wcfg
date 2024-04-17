@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/test_calculator_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="test_calculator" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="15" />
+   <wvobject fp_name="/test_calculator/read_input" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">read_input</obj_property>
+      <obj_property name="ObjectShortName">read_input</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/calc_input" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">calc_input[7:0]</obj_property>
+      <obj_property name="ObjectShortName">calc_input[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/result_sent" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">result_sent</obj_property>
+      <obj_property name="ObjectShortName">result_sent</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/send" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">send</obj_property>
+      <obj_property name="ObjectShortName">send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/uut/input_valid" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">input_valid</obj_property>
+      <obj_property name="ObjectShortName">input_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/uut/operator_register" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">operator_register[1:0]</obj_property>
+      <obj_property name="ObjectShortName">operator_register[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/uut/input_symbol" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">input_symbol[4:0]</obj_property>
+      <obj_property name="ObjectShortName">input_symbol[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/uut/current_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/uut/next_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/uut/result_register" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">result_register[11:0]</obj_property>
+      <obj_property name="ObjectShortName">result_register[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/uut/argument_register_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">argument_register_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">argument_register_1[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/uut/argument_register_2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">argument_register_2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">argument_register_2[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_calculator/uut/reset_registers" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset_registers</obj_property>
+      <obj_property name="ObjectShortName">reset_registers</obj_property>
+   </wvobject>
+</wave_config>

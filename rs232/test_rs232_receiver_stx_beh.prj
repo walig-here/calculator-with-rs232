@@ -1,0 +1,4 @@
+vhdl isim_temp "modulo10_counter.vhd"
+vhdl isim_temp "divider_50MHz_to_115200Hz.vhd"
+vhdl isim_temp "rs232_receiver.vhd"
+vhdl isim_temp "test_rs232_receiver.vhd"

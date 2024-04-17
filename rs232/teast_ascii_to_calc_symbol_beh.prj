@@ -1,0 +1,2 @@
+vhdl work "ascii_to_calc_symbol.vhd"
+vhdl work "teast_ascii_to_calc_symbol.vhd"

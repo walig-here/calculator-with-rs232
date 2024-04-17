@@ -1,0 +1,4 @@
+vhdl isim_temp "register_12_synchronized.vhd"
+vhdl isim_temp "ascii_to_calc_symbol.vhd"
+vhdl isim_temp "calculator.vhd"
+vhdl isim_temp "test_calculator.vhd"

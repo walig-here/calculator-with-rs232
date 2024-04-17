@@ -1,0 +1,32 @@
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o calculator_map.ncd calculator.ngd calculator.pcf 
+par -w -intstyle ise -ol high -t 1 calculator_map.ncd calculator.ncd calculator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml calculator.twx calculator.ncd -o calculator.twr calculator.pcf 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o calculator_map.ncd calculator.ngd calculator.pcf 
+par -w -intstyle ise -ol high -t 1 calculator_map.ncd calculator.ncd calculator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml calculator.twx calculator.ncd -o calculator.twr calculator.pcf 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 calculator.ngc calculator.ngd  
+map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o calculator_map.ncd calculator.ngd calculator.pcf 
+par -w -intstyle ise -ol high -t 1 calculator_map.ncd calculator.ncd calculator.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml calculator.twx calculator.ncd -o calculator.twr calculator.pcf 
+vhdtdtfi -lib work register_12_synchronized.vhd -lib work ascii_to_calc_symbol.vhd -lib work calculator.vhd -prj rs232 -o calculator.spl -module calculator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e calculator.spl C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.sym 
+vhdtdtfi -lib work register_12_synchronized.vhd -lib work ascii_to_calc_symbol.vhd -lib work calculator.vhd -prj rs232 -o calculator.spl -module calculator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e calculator.spl C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.sym 
+vhdtdtfi -lib work register_12_synchronized.vhd -lib work ascii_to_calc_symbol.vhd -lib work calculator.vhd -prj rs232 -o calculator.spl -module calculator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e calculator.spl C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.sym 
+xst -intstyle ise -ifn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.xst" -ofn "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.syr" 

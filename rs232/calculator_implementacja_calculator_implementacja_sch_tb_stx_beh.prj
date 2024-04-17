@@ -1,0 +1,8 @@
+vhdl isim_temp "register_12_synchronized.vhd"
+vhdl isim_temp "modulo10_counter.vhd"
+vhdl isim_temp "divider_50MHz_to_115200Hz.vhd"
+vhdl isim_temp "ascii_to_calc_symbol.vhd"
+vhdl isim_temp "rs232_receiver.vhd"
+vhdl isim_temp "calculator.vhd"
+vhdl isim_temp "calculator_implementacja.vhf"
+vhdl isim_temp "test_receiver_calculator.vhd"
