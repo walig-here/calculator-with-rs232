@@ -1,0 +1,2 @@
+vhdtdtfi -lib work impulse_generator.vhd -prj rs232 -o impulse_generator.spl -module impulse_generator -template C:/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e impulse_generator.spl C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/impulse_generator.sym 

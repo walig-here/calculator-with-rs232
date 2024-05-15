@@ -11,7 +11,7 @@ NET "clock" PERIOD = 20.0ns HIGH 50%;
 #
 # Push-buttons (Press = Hi)
 #
-#NET "btn_north" LOC = "V4"  | IOSTANDARD = LVTTL | PULLDOWN;
+#NET "result_sent" LOC = "V4"  | IOSTANDARD = LVTTL | PULLDOWN;
 NET "reset"  LOC = "H13" | IOSTANDARD = LVTTL | PULLDOWN;
 #NET "btn_south" LOC = "K17" | IOSTANDARD = LVTTL | PULLDOWN;
 #NET "start"  LOC = "D18" | IOSTANDARD = LVTTL | PULLDOWN;
@@ -34,14 +34,14 @@ NET "reset"  LOC = "H13" | IOSTANDARD = LVTTL | PULLDOWN;
 #
 # Simple LEDs (Hi = On)
 #
-NET "data_out(0)" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
-NET "data_out(1)" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
-NET "data_out(2)" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
-NET "data_out(3)" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
-NET "data_out(4)" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
-NET "data_out(5)" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
-NET "data_out(6)" LOC = "E9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
-NET "data_out(7)" LOC = "F9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#NET "result(0)" LOC = "F12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#NET "result(1)" LOC = "E12" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#NET "result(2)" LOC = "E11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#NET "result(3)" LOC = "F11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#NET "result(4)" LOC = "C11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#NET "result(5)" LOC = "D11" | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#NET "result(6)" LOC = "E9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
+#NET "result(7)" LOC = "F9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
 
 #
 # PS/2 port
@@ -60,7 +60,7 @@ NET "data_out(7)" LOC = "F9"  | IOSTANDARD = LVTTL | SLEW = SLOW | DRIVE = 4;
 
 # RS-232 Serial Port: DCE
 NET "data_in" LOC = "R7" | IOSTANDARD = LVTTL ;
-#NET "data_out" LOC = "M14" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = SLOW ;
+NET "data_out" LOC = "M14" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = SLOW ;
 # RS-232 Serial Port: DTE
 #NET "RS232_RXD" LOC = "U8" | IOSTANDARD = LVTTL ;
 #NET "RS232_TXD" LOC = "M13" | IOSTANDARD = LVTTL | DRIVE = 8 | SLEW = SLOW ;

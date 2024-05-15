@@ -3,7 +3,7 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja_calculator_implementacja_sch_tb_isim_beh.wdb" id="1" type="auto">
+      <db_ref path="C:/Users/lab/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja_calculator_implementacja_sch_tb_isim_beh.wdb" id="1" type="auto">
          <top_modules>
             <top_module name="calculator_implementacja_calculator_implementacja_sch_tb" />
             <top_module name="numeric_std" />
@@ -12,7 +12,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="12" />
+   <WVObjectSize size="13" />
    <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/reset" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">reset</obj_property>
       <obj_property name="ObjectShortName">reset</obj_property>
@@ -37,28 +37,32 @@
       <obj_property name="ElementShortName">data_ready</obj_property>
       <obj_property name="ObjectShortName">data_ready</obj_property>
    </wvobject>
-   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_1/current_state" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">current_state</obj_property>
-      <obj_property name="ObjectShortName">current_state</obj_property>
-   </wvobject>
-   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_1/next_state" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">next_state</obj_property>
-      <obj_property name="ObjectShortName">next_state</obj_property>
-   </wvobject>
    <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/result" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">result[11:0]</obj_property>
-      <obj_property name="ObjectShortName">result[11:0]</obj_property>
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_1/argument_register_1" type="array" db_ref_id="1">
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/argument_register_1" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">argument_register_1[11:0]</obj_property>
       <obj_property name="ObjectShortName">argument_register_1[11:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_1/argument_register_2" type="array" db_ref_id="1">
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/argument_register_2" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">argument_register_2[11:0]</obj_property>
       <obj_property name="ObjectShortName">argument_register_2[11:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_1/operator_register" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">operator_register[1:0]</obj_property>
-      <obj_property name="ObjectShortName">operator_register[1:0]</obj_property>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/result_register" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">result_register[11:0]</obj_property>
+      <obj_property name="ObjectShortName">result_register[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/current_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/next_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/sent_digits" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sent_digits[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sent_digits[1:0]</obj_property>
    </wvobject>
 </wave_config>

@@ -45,7 +45,7 @@ architecture Behavioral of rs232_transmitter is
 	signal current_state : state;
 	signal next_state : state;
 	
-	signal data_register : STD_LOGIC_VECTOR (8 downto 0) := (others => '1');
+	signal data_register : STD_LOGIC_VECTOR (9 downto 0) := (others => '1');
 	signal internal_busy : STD_LOGIC;
 	signal transmitted_bit: STD_LOGIC_VECTOR (3 downto 0);
 	signal baud_clock : STD_LOGIC;
@@ -120,20 +120,36 @@ begin
 	end process;
 	
 	-- data_register
-	process(start, internal_busy, baud_clock, reset, data_in) begin
+	process(start, internal_busy, baud_clock, reset, data_in, current_state) begin
 		if reset = '1' then
 			data_register <= (others => '1');
-		elsif start = '1' and internal_busy = '0' then
-			data_register <= data_in & '0';
-		elsif rising_edge(baud_clock) then
-			data_register <= '1' & data_register(8 downto 1);
-		else
-			data_register <= data_register;
+		else 
+			case current_state is
+				when idle =>
+					if start = '1' and internal_busy = '0' then
+						data_register <= '1' & data_in & '0';
+					else
+						data_register <= data_register;
+					end if;
+				when active =>
+					if rising_edge(baud_clock) then
+						data_register <= '1' & data_register(9 downto 1);
+					else
+						data_register <= data_register;
+					end if;
+			end case;
 		end if;
 	end process;
 	
 	-- data_out
-	data_out <= data_register(0);
+	process (current_state, data_register) begin
+		case current_state is 
+			when idle =>
+				data_out <= '1';
+			when active =>
+				data_out <= data_register(0);
+		end case;
+	end process;
 		
 end Behavioral;
 

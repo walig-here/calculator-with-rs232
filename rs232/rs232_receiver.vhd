@@ -109,7 +109,7 @@ begin
 	ready <= internal_ready;
 	
 	-- internal_ready
-	process (received_bit, current_state, reset) begin
+	process (received_bit, current_state, reset, next_state) begin
 		case current_state is
 			when active =>
 				case received_bit is
@@ -118,8 +118,8 @@ begin
 					when others =>
 						internal_ready <= '0';
 				end case;
-			when idle =>
-				internal_ready <= internal_ready;
+			when others =>
+				internal_ready <= '0';
 		end case;
 	end process;
 	

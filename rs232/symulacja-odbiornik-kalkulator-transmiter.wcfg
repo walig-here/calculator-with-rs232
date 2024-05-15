@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja_calculator_implementacja_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="calculator_implementacja_calculator_implementacja_sch_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/data_in" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data_in</obj_property>
+      <obj_property name="ObjectShortName">data_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clock</obj_property>
+      <obj_property name="ObjectShortName">clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/data_out" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data_out</obj_property>
+      <obj_property name="ObjectShortName">data_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/send" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">send</obj_property>
+      <obj_property name="ObjectShortName">send</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/result_sent" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">result_sent</obj_property>
+      <obj_property name="ObjectShortName">result_sent</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/result" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">result[7:0]</obj_property>
+      <obj_property name="ObjectShortName">result[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/data_ready" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">data_ready</obj_property>
+      <obj_property name="ObjectShortName">data_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/calc_input" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">calc_input[7:0]</obj_property>
+      <obj_property name="ObjectShortName">calc_input[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/busy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">busy</obj_property>
+      <obj_property name="ObjectShortName">busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_7/baud_clock" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">baud_clock</obj_property>
+      <obj_property name="ObjectShortName">baud_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/not_busy" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">not_busy</obj_property>
+      <obj_property name="ObjectShortName">not_busy</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/current_state" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/result_register" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">result_register[11:0]</obj_property>
+      <obj_property name="ObjectShortName">result_register[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/argument_register_1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">argument_register_1[11:0]</obj_property>
+      <obj_property name="ObjectShortName">argument_register_1[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/argument_register_2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">argument_register_2[11:0]</obj_property>
+      <obj_property name="ObjectShortName">argument_register_2[11:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calculator_implementacja_calculator_implementacja_sch_tb/UUT/XLXI_4/sent_digits" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sent_digits[1:0]</obj_property>
+      <obj_property name="ObjectShortName">sent_digits[1:0]</obj_property>
+   </wvobject>
+</wave_config>

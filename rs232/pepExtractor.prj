@@ -1,3 +1,1 @@
-work	"ascii_to_calc_symbol.vhd"
-work	"calculator.vhd"
-work	"register_12_synchronized.vhd"
+work	"impulse_generator.vhd"

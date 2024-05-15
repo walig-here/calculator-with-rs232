@@ -311,15 +311,12 @@ LAB7:    xsi_set_current_line(119, ng0);
 LAB5:    goto LAB2;
 
 LAB4:    xsi_set_current_line(122, ng0);
-    t1 = (t0 + 2152U);
-    t2 = *((char **)t1);
-    t3 = *((unsigned char *)t2);
     t1 = (t0 + 6128);
-    t4 = (t1 + 56U);
-    t5 = *((char **)t4);
-    t6 = (t5 + 56U);
-    t8 = *((char **)t6);
-    *((unsigned char *)t8) = t3;
+    t2 = (t1 + 56U);
+    t4 = *((char **)t2);
+    t5 = (t4 + 56U);
+    t6 = *((char **)t5);
+    *((unsigned char *)t6) = (unsigned char)2;
     xsi_driver_first_trans_fast(t1);
     goto LAB2;
 

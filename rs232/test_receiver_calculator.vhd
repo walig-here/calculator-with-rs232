@@ -27,7 +27,7 @@ ARCHITECTURE behavioral OF
           clock	:	IN	STD_LOGIC; 
           result_sent	:	IN	STD_LOGIC; 
           data_in	:	IN	STD_LOGIC; 
-          result	:	OUT	STD_LOGIC_VECTOR (11 DOWNTO 0); 
+          result	:	OUT	STD_LOGIC_VECTOR (7 DOWNTO 0); 
           send	:	OUT	STD_LOGIC);
    END COMPONENT;
 
@@ -35,7 +35,7 @@ ARCHITECTURE behavioral OF
    SIGNAL clock	:	STD_LOGIC;
    SIGNAL result_sent	:	STD_LOGIC := '0';
    SIGNAL data_in	:	STD_LOGIC := '1';
-   SIGNAL result	:	STD_LOGIC_VECTOR (11 DOWNTO 0);
+   SIGNAL result	:	STD_LOGIC_VECTOR (7 DOWNTO 0);
    SIGNAL send	:	STD_LOGIC;
 	
 	-- Clock period definitions
@@ -49,6 +49,14 @@ ARCHITECTURE behavioral OF
 		'1' & x"31" & '0', 	-- 1	
 		'1' & x"2B" & '0', 	-- +	
 		'1' & x"32" & '0', 	-- 2	
+		'1' & x"0D" & '0' 	-- ENTER
+	);
+	
+	constant test_subtraction : MESSAGE(1 to 5) := (	
+		'1' & x"31" & '0', 	-- 1
+		'1' & x"61" & '0',	-- A
+		'1' & x"2D" & '0', 	-- -	
+		'1' & x"35" & '0', 	-- 5	
 		'1' & x"0D" & '0' 	-- ENTER
 	);
 
@@ -77,7 +85,7 @@ BEGIN
    BEGIN
 		wait for 2 * baud_period + 3 ns;
 	
-		-- Odbranie wiadomoœci Hello
+		-- Dodawanie
 		for i in 1 to 4 loop
 			for j in 0 to 9 loop
 				data_in <= test_expression(i)(j);
@@ -85,7 +93,26 @@ BEGIN
 			end loop;
 			wait for 1.43 * baud_period;
 		end loop;
+		
+		for i in 1 to 3 loop
+			wait for 10 * baud_period;
+			result_sent <= '1', '0' after clock_period;
+		end loop;
 		wait for 2 * baud_period;
+		
+		-- Odejmowanie
+		for i in 1 to 5 loop
+			for j in 0 to 9 loop
+				data_in <= test_subtraction(i)(j);
+				wait for baud_period;
+			end loop;
+			wait for 1.43 * baud_period;
+		end loop;
+
+		for i in 1 to 3 loop
+			wait for 10 * baud_period;
+			result_sent <= '1', '0' after clock_period;
+		end loop;
 		
       WAIT; -- will wait forever
    END PROCESS;

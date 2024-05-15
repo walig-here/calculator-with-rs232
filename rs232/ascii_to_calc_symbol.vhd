@@ -59,7 +59,6 @@ architecture Behavioral of ascii_to_calc_symbol is
 	constant ADD : STD_LOGIC_VECTOR(4 downto 0) 		:= "1" & x"0";
 	constant SUB : STD_LOGIC_VECTOR(4 downto 0) 		:= "1" & x"1";
 	constant MUL : STD_LOGIC_VECTOR(4 downto 0) 		:= "1" & x"2";
-	constant DIV : STD_LOGIC_VECTOR(4 downto 0) 		:= "1" & x"3";
 	constant EQU : STD_LOGIC_VECTOR(4 downto 0) 		:= "1" & x"4";
 
 begin
@@ -85,7 +84,6 @@ begin
 		'1' 		when x"2B",
 		'1' 		when x"2D",
 		'1' 		when x"2A",
-		'1' 		when x"2F",
 		'1' 		when x"0D",
 		'0'		when others;
 
@@ -110,7 +108,6 @@ begin
 		ADD 		when x"2B",
 		SUB 		when x"2D",
 		MUL 		when x"2A",
-		DIV 		when x"2F",
 		EQU 		when x"0D",
 		(others => '0') when others;
 

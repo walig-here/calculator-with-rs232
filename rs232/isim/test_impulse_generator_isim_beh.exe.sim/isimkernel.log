@@ -1,0 +1,30 @@
+Command line:
+   test_impulse_generator_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  53957
+
+Wed May 15 17:43:14 2024
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5150.1 Meg
+
+ Total Signals          : 9
+ Total Nets             : 6
+ Total Signal Drivers   : 6
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 6
+ Total Traceable Variables  : 9
+ Total Scalar Nets and Variables : 367
+Total Line Count : 27
+Total Line Count : 27
+
+ Total Simulation Time: 0.078125 sec
+
+ Current Memory Usage: 4992.81 Meg
+
+Wed May 15 17:44:18 2024
+

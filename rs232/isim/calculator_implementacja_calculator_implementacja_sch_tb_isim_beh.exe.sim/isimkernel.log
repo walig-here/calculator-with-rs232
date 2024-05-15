@@ -2,30 +2,29 @@ Command line:
    calculator_implementacja_calculator_implementacja_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  58970
+     -socket  54306
 
-Wed Apr 17 21:03:13 2024
+Wed May 15 18:46:26 2024
 
 
- Elaboration Time: 0.03125 sec
+ Elaboration Time: 0.046875 sec
 
- Current Memory Usage: 5150.1 Meg
+ Current Memory Usage: 5150.24 Meg
 
- Total Signals          : 93
- Total Nets             : 162
- Total Signal Drivers   : 29
- Total Blocks           : 12
- Total Primitive Blocks : 8
- Total Processes        : 29
- Total Traceable Variables  : 40
- Total Scalar Nets and Variables : 820
-Total Line Count : 123
-Total Line Count : 123
-Total Line Count : 123
+ Total Signals          : 139
+ Total Nets             : 214
+ Total Signal Drivers   : 50
+ Total Blocks           : 20
+ Total Primitive Blocks : 15
+ Total Processes        : 50
+ Total Traceable Variables  : 44
+ Total Scalar Nets and Variables : 1080
+Total Line Count : 215
+Total Line Count : 215
 
- Total Simulation Time: 0.65625 sec
+ Total Simulation Time: 1.01563 sec
 
- Current Memory Usage: 4678.24 Meg
+ Current Memory Usage: 4678.39 Meg
 
-Wed Apr 17 21:06:20 2024
+Wed May 15 18:49:09 2024
 

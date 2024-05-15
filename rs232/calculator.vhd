@@ -36,9 +36,8 @@ entity calculator is
          reset : in  STD_LOGIC;										-- resetowanie kalkulatora do stanu pocz¹tkowego
          result_sent : in  STD_LOGIC;								-- czy wynik zosta³ w poprawnie przes³any
 			clock : in STD_LOGIC;
-			
          send : out  STD_LOGIC;										-- czy rozpocz¹æ wysy³anie wyniku?
-         result : out  STD_LOGIC_VECTOR (11 downto 0)			-- wynik
+         result : out  STD_LOGIC_VECTOR (7 downto 0)			-- wynik
 		);
 end calculator;
 
@@ -61,7 +60,6 @@ architecture Behavioral of calculator is
 	-- | REJESTRY																			|
 	-- #=================================================================#
 	signal result_register 		: UNSIGNED(11 downto 0) := (others => '0');
-	signal operator_register 	: STD_LOGIC_VECTOR(1 downto 0) := (others => '0');
 	
 	-- #=================================================================#
 	-- | KODOWANIE WEJŒCIA																|
@@ -88,6 +86,16 @@ architecture Behavioral of calculator is
 	signal input_valid : STD_LOGIC;
 	
 	-- #=================================================================#
+	-- | TRANSKODER WYJŒCIOWY															|
+	-- #=================================================================#
+	component output_transcoder is
+		port(
+			calc_digit : in  STD_LOGIC_VECTOR (3 downto 0);
+         ascii_output : out  STD_LOGIC_VECTOR (7 downto 0)
+		);
+	end component;
+	
+	-- #=================================================================#
 	-- | REJESTRY PRZESUWNE 12 BITOWE												|	
 	-- #=================================================================#
 	component register_12_synchronized is
@@ -107,7 +115,36 @@ architecture Behavioral of calculator is
 	signal read_argument_2 : STD_LOGIC;
 	signal reset_registers : STD_LOGIC;
 	
+	-- #=================================================================#
+	-- | REJESTRY 2 BITOWY (OPERATOROW)												|	
+	-- #=================================================================#
+	component register_2_synchronized is
+    port ( clock : in  STD_LOGIC;
+           read_input : in  STD_LOGIC;
+           reset : in  STD_LOGIC;
+           data_in : in  STD_LOGIC_VECTOR (1 downto 0);
+           data_out : out  STD_LOGIC_VECTOR (1 downto 0));
+	end component register_2_synchronized;
+	signal current_operator : STD_LOGIC_VECTOR(1 downto 0) := (others => '0');
+	signal read_operator : STD_LOGIC;
+	
+	-- #=================================================================#
+	-- | LICZNIK WYS£ANYCH CYFR													   |	
+	-- #=================================================================#
+	component sent_digits_counter is
+    port ( reset : in  STD_LOGIC;
+           clock : in  STD_LOGIC;
+           clock_enable : in  STD_LOGIC;
+           counter_out : out  STD_LOGIC_VECTOR (1 downto 0));
+	end component sent_digits_counter;
+	signal sent_digits : STD_LOGIC_VECTOR (1 downto 0);
+	
+	signal int_send : STD_LOGIC;
+	
 begin
+
+	-- send
+	send <= int_send;
 
 	-- reset_registers
 	process (next_state, current_state, reset) begin
@@ -126,12 +163,35 @@ begin
 			end case;
 		end if;
 	end process;
+	
+	-- instancja licznika wys³anych cyfr
+	counter: sent_digits_counter port map (
+		reset=>reset,
+		clock=>clock,
+		clock_enable=>result_sent,
+		counter_out=>sent_digits
+	);
+	
+	-- instancja rejestru operatorów
+	operator_register: register_2_synchronized port map (
+		clock=>clock,
+		read_input=>read_operator,
+		reset=>reset_registers,
+		data_in=>input_symbol(1 downto 0),
+		data_out=>current_operator
+	);
 
 	-- instancja transkodera wejœciowego
 	input_transcoder: ascii_to_calc_symbol port map (
 		ascii=>calc_input,
 		calc_symbol=>input_symbol,
 		symbol_valid=>input_valid
+	);
+	
+	-- instancja transkodera wyjœciowego
+	digits_to_acii: output_transcoder port map (
+		ascii_output=>result,
+		calc_digit=>STD_LOGIC_VECTOR(result_register(3 downto 0))
 	);
 	
 	-- argument_register_1
@@ -199,47 +259,63 @@ begin
 	end process;
 	
 	-- result_register
-	process (argument_register_1, argument_register_2, operator_register) begin
-		case operator_register is
-			when "00" =>
-				result_register <= UNSIGNED(argument_register_1) + UNSIGNED(argument_register_2);
-			when "01" =>
-				result_register <= UNSIGNED(argument_register_1) - UNSIGNED(argument_register_2);
-			when others =>
-				result_register <= (others => '0');
-		end case;
-	end process;
-	
-	-- operator_register
-	process (current_state, input_valid, input_symbol, read_input) begin
+	process (argument_register_1, argument_register_2, current_operator, current_state, int_send) begin
 		case current_state is
-			when argument_1 =>
-				if read_input = '1' and input_valid = '1' and input_symbol(4) = '1' then
-					operator_register <= input_symbol(1 downto 0);
-				else
-					operator_register <= (others => '0');
-				end if;
-			when operator =>
-				if read_input = '1' and input_valid = '1' and input_symbol(4) = '1' then
-					operator_register <= input_symbol(1 downto 0);
-				else
-					operator_register <= (others => '0');
+			when sending =>
+				if falling_edge(int_send) then
+					result_register <= UNSIGNED(x"0" & STD_LOGIC_VECTOR(result_register(11 downto 4)));
 				end if;
 			when others =>
-				operator_register <= (others => '0');
+				case current_operator is
+					when "00" =>
+						result_register <= UNSIGNED(argument_register_1) + UNSIGNED(argument_register_2);
+					when "01" =>
+						result_register <= UNSIGNED(argument_register_1) - UNSIGNED(argument_register_2);
+					when others =>
+						result_register <= (others => '0');
+				end case;
 		end case;
 	end process;
 	
-	-- send
-	with current_state select send <=
-		'1' when sending,
-		'0' when others;
+	-- read_operator
+	process (current_state, input_valid, input_symbol, read_input) begin
+		if read_input = '1' and input_valid = '1' and input_symbol(4) = '1' then
+			case current_state is
+				when argument_1 =>
+					read_operator <= '1';
+				when operator =>
+					read_operator <= '1';
+				when others =>
+					read_operator <= '0';
+			end case;
+		else
+			read_operator <= '0';
+		end if;
+	end process;
 	
-	-- result_byte
-	result <= STD_LOGIC_VECTOR(result_register);
+	-- int_send
+	process (current_state, result_sent, next_state) begin
+		case current_state is
+			when sending =>
+				if result_sent = '1' and next_state /= idle then
+					int_send <= '1';
+				else
+					int_send <= '0';
+				end if;
+			when argument_2 =>
+				case next_state is
+					when sending =>
+						int_send <= '1';
+					when others =>
+						int_send <= '0';
+				end case;
+			when others =>
+				int_send <= '0';
+		end case;
+	end process;
 	
 	-- next_state
-	process (current_state, read_input, input_valid, input_symbol, result_sent) begin
+	process (current_state, read_input, input_valid, input_symbol, result_sent, sent_digits) begin
 		next_state <= current_state;
 		if read_input = '1' and input_valid = '1' then
 			case current_state is
@@ -266,7 +342,12 @@ begin
 			case current_state is
 				when sending =>
 					if result_sent = '1' then
-						next_state <= idle;
+						case sent_digits is
+							when "10" =>
+								next_state <= idle;
+							when others =>
+								next_state <= current_state;
+						end case;
 					end if;
 				when others =>
 					next_state <= current_state;

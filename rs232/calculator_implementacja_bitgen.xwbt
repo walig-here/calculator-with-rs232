@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Dawid\Desktop\calculator-with-rs232-main\rs232\calculator_implementacja.ncd
+OUTFILE=C:\Users\Dawid\Desktop\calculator-with-rs232-main\rs232\calculator_implementacja.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=C:\Users\Dawid\Desktop\calculator-with-rs232-main\rs232
+LICENSE=WebPack
+USER_INFO=212856451_0_0_079

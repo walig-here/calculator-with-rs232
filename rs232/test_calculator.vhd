@@ -47,7 +47,7 @@ ARCHITECTURE behavior OF test_calculator IS
          result_sent : IN  std_logic;
          clock : IN  std_logic;
          send : OUT  std_logic;
-         result : OUT  std_logic_vector(11 downto 0)
+         result : OUT  std_logic_vector(7 downto 0)
         );
     END COMPONENT;
     
@@ -61,7 +61,7 @@ ARCHITECTURE behavior OF test_calculator IS
 
  	--Outputs
    signal send : std_logic;
-   signal result : std_logic_vector(11 downto 0);
+   signal result : std_logic_vector(7 downto 0);
 
    -- Clock period definitions
    constant clock_period : time := 5 ns;
