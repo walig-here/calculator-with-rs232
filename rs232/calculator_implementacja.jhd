@@ -1,9 +1,0 @@
-MODULE calculator_implementacja
-	SUBMODULE rs232_receiver
-		INSTANCE XLXI_2
-	SUBMODULE calculator
-		INSTANCE XLXI_4
-	SUBMODULE rs232_transmitter
-		INSTANCE XLXI_7
-	SUBMODULE impulse_generator
-		INSTANCE XLXI_10

@@ -1,106 +1,91 @@
-V3 64
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/ascii_to_calc_symbol.vhd 2024/04/18.12:46:44 P.20131013
-EN work/ascii_to_calc_symbol 1715790437 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/ascii_to_calc_symbol.vhd \
+V3 49
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/ascii_to_calc_symbol.vhd 2024/04/18.12:46:44 P.20131013
+EN work/ascii_to_calc_symbol 1715791904 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/ascii_to_calc_symbol.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/ascii_to_calc_symbol/Behavioral 1715790438 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/ascii_to_calc_symbol.vhd \
-      EN work/ascii_to_calc_symbol 1715790437
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator.vhd 2024/05/15.18:26:28 P.20131013
-EN work/calculator 1715790445 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator.vhd \
+AR work/ascii_to_calc_symbol/Behavioral 1715791905 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/ascii_to_calc_symbol.vhd \
+      EN work/ascii_to_calc_symbol 1715791904
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.vhd 2024/05/15.18:26:28 P.20131013
+EN work/calculator 1715791912 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/calculator/Behavioral 1715790446 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator.vhd \
-      EN work/calculator 1715790445 CP sent_digits_counter \
+AR work/calculator/Behavioral 1715791913 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.vhd \
+      EN work/calculator 1715791912 CP sent_digits_counter \
       CP register_2_synchronized CP ascii_to_calc_symbol CP output_transcoder \
       CP register_12_synchronized
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja.vhf 2024/05/15.16:16:59 P.20131013
-EN work/calculator_implementacja 1715790451 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja.vhf \
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.vhf 2024/05/15.18:51:32 P.20131013
+EN work/calculator_implementacja 1715791918 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.vhf \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181 LB UNISIM \
       PH unisim/VCOMPONENTS 1381692182
-AR work/calculator_implementacja/BEHAVIORAL 1715790452 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja.vhf \
-      EN work/calculator_implementacja 1715790451 CP rs232_receiver CP calculator \
+AR work/calculator_implementacja/BEHAVIORAL 1715791919 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.vhf \
+      EN work/calculator_implementacja 1715791918 CP rs232_receiver CP calculator \
       CP rs232_transmitter CP impulse_generator CP INV
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/divider_50MHz_to_115200Hz.vhd 2024/04/18.11:19:52 P.20131013
-EN work/divider_50MHz_to_115200Hz 1715790431 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/divider_50MHz_to_115200Hz.vhd \
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/divider_50MHz_to_115200Hz.vhd 2024/04/18.11:19:52 P.20131013
+EN work/divider_50MHz_to_115200Hz 1715791898 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/divider_50MHz_to_115200Hz.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/divider_50MHz_to_115200Hz/Behavioral 1715790432 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/divider_50MHz_to_115200Hz.vhd \
-      EN work/divider_50MHz_to_115200Hz 1715790431
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/impulse_generator.vhd 2024/05/15.17:43:07 P.20131013
-EN work/impulse_generator 1715790449 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/impulse_generator.vhd \
+AR work/divider_50MHz_to_115200Hz/Behavioral 1715791899 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/divider_50MHz_to_115200Hz.vhd \
+      EN work/divider_50MHz_to_115200Hz 1715791898
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/impulse_generator.vhd 2024/05/15.17:43:07 P.20131013
+EN work/impulse_generator 1715791916 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/impulse_generator.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/impulse_generator/Behavioral 1715790450 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/impulse_generator.vhd \
-      EN work/impulse_generator 1715790449
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/modulo10_counter.vhd 2024/04/18.11:19:52 P.20131013
-EN work/modulo10_counter 1715790429 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/modulo10_counter.vhd \
+AR work/impulse_generator/Behavioral 1715791917 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/impulse_generator.vhd \
+      EN work/impulse_generator 1715791916
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/modulo10_counter.vhd 2024/04/18.11:19:52 P.20131013
+EN work/modulo10_counter 1715791896 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/modulo10_counter.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/modulo10_counter/Behavioral 1715790430 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/modulo10_counter.vhd \
-      EN work/modulo10_counter 1715790429
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/output_transcoder.vhd 2024/05/15.14:55:22 P.20131013
-EN work/output_transcoder 1715790439 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/output_transcoder.vhd \
+AR work/modulo10_counter/Behavioral 1715791897 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/modulo10_counter.vhd \
+      EN work/modulo10_counter 1715791896
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/output_transcoder.vhd 2024/05/15.14:55:22 P.20131013
+EN work/output_transcoder 1715791906 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/output_transcoder.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/output_transcoder/Behavioral 1715790440 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/output_transcoder.vhd \
-      EN work/output_transcoder 1715790439
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_12_synchronized.vhd 2024/04/18.11:19:52 P.20131013
-EN work/register_12_synchronized 1715790441 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_12_synchronized.vhd \
+AR work/output_transcoder/Behavioral 1715791907 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/output_transcoder.vhd \
+      EN work/output_transcoder 1715791906
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_12_synchronized.vhd 2024/04/18.11:19:52 P.20131013
+EN work/register_12_synchronized 1715791908 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_12_synchronized.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/register_12_synchronized/Behavioral 1715790442 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_12_synchronized.vhd \
-      EN work/register_12_synchronized 1715790441
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_2_synchronized.vhd 2024/04/18.12:15:32 P.20131013
-EN work/register_2_synchronized 1715790435 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_2_synchronized.vhd \
+AR work/register_12_synchronized/Behavioral 1715791909 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_12_synchronized.vhd \
+      EN work/register_12_synchronized 1715791908
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_2_synchronized.vhd 2024/04/18.12:15:32 P.20131013
+EN work/register_2_synchronized 1715791902 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_2_synchronized.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/register_2_synchronized/Behavioral 1715790436 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_2_synchronized.vhd \
-      EN work/register_2_synchronized 1715790435
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_receiver.vhd 2024/04/18.11:23:07 P.20131013
-EN work/rs232_receiver 1715790443 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_receiver.vhd \
+AR work/register_2_synchronized/Behavioral 1715791903 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_2_synchronized.vhd \
+      EN work/register_2_synchronized 1715791902
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_receiver.vhd 2024/04/18.11:23:07 P.20131013
+EN work/rs232_receiver 1715791910 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_receiver.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/rs232_receiver/Behavioral 1715790444 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_receiver.vhd \
-      EN work/rs232_receiver 1715790443 CP modulo10_counter \
+AR work/rs232_receiver/Behavioral 1715791911 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_receiver.vhd \
+      EN work/rs232_receiver 1715791910 CP modulo10_counter \
       CP divider_50MHz_to_115200Hz
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_transmitter.vhd 2024/05/15.18:05:12 P.20131013
-EN work/rs232_transmitter 1715790447 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_transmitter.vhd \
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_transmitter.vhd 2024/05/15.18:05:12 P.20131013
+EN work/rs232_transmitter 1715791914 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_transmitter.vhd \
       PB ieee/std_logic_1164 1381692176
-AR work/rs232_transmitter/Behavioral 1715790448 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_transmitter.vhd \
-      EN work/rs232_transmitter 1715790447 CP modulo10_counter \
+AR work/rs232_transmitter/Behavioral 1715791915 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_transmitter.vhd \
+      EN work/rs232_transmitter 1715791914 CP modulo10_counter \
       CP divider_50MHz_to_115200Hz
-FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/sent_digits_counter.vhd 2024/05/15.18:19:18 P.20131013
-EN work/sent_digits_counter 1715790433 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/sent_digits_counter.vhd \
+FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/sent_digits_counter.vhd 2024/05/15.18:19:18 P.20131013
+EN work/sent_digits_counter 1715791900 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/sent_digits_counter.vhd \
       PB ieee/std_logic_1164 1381692176 PB ieee/NUMERIC_STD 1381692181
-AR work/sent_digits_counter/Behavioral 1715790434 \
-      FL C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/sent_digits_counter.vhd \
-      EN work/sent_digits_counter 1715790433
-FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/ascii_to_calc_symbol.vhd 2024/04/17.14:04:17 P.20131013
-FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.vhd 2024/04/17.20:30:34 P.20131013
-FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.vhf 2024/04/17.20:40:51 P.20131013
-FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/divider_50MHz_to_115200Hz.vhd 2024/04/04.11:21:01 P.20131013
-FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/modulo10_counter.vhd 2024/04/04.11:21:02 P.20131013
-FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_12_synchronized.vhd 2024/04/17.18:29:31 P.20131013
-FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_receiver.vhd 2024/04/04.12:41:39 P.20131013
-FL C:/Users/lab/Desktop/calculator-with-rs232-main/rs232/ascii_to_calc_symbol.vhd 2024/04/18.11:19:50 P.20131013
-FL C:/Users/lab/Desktop/calculator-with-rs232-main/rs232/calculator.vhd 2024/04/18.12:14:59 P.20131013
-FL C:/Users/lab/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja.vhf 2024/04/18.11:38:21 P.20131013
-FL C:/Users/lab/Desktop/calculator-with-rs232-main/rs232/divider_50MHz_to_115200Hz.vhd 2024/04/18.11:19:52 P.20131013
-FL C:/Users/lab/Desktop/calculator-with-rs232-main/rs232/modulo10_counter.vhd 2024/04/18.11:19:52 P.20131013
-FL C:/Users/lab/Desktop/calculator-with-rs232-main/rs232/register_12_synchronized.vhd 2024/04/18.11:19:52 P.20131013
-FL C:/Users/lab/Desktop/calculator-with-rs232-main/rs232/register_2_synchronized.vhd 2024/04/18.12:15:32 P.20131013
-FL C:/Users/lab/Desktop/calculator-with-rs232-main/rs232/rs232_receiver.vhd 2024/04/18.11:23:07 P.20131013
+AR work/sent_digits_counter/Behavioral 1715791901 \
+      FL C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/sent_digits_counter.vhd \
+      EN work/sent_digits_counter 1715791900

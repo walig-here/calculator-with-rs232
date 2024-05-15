@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-DESKTOP-I9RD2A9::  Wed May 15 18:27:30 2024
+DESKTOP-I9RD2A9::  Wed May 15 18:51:57 2024
 
 par -w -intstyle ise -ol high -t 1 calculator_implementacja_map.ncd
 calculator_implementacja.ncd calculator_implementacja.pcf 
@@ -104,9 +104,9 @@ Phase  2  : 694 unrouted;      REAL time: 7 secs
 
 Phase  3  : 137 unrouted;      REAL time: 7 secs 
 
-Phase  4  : 137 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  4  : 137 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
 
-Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
+Phase  5  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
 
 Updating file: calculator_implementacja.ncd with current fully routed design.
 
@@ -123,7 +123,7 @@ WARNING:Route:455 - CLK Net:send may have excessive skew because
       1 CLK pins and 13 NON_CLK pins failed to route using a CLK template.
 
 Total REAL time to Router completion: 8 secs 
-Total CPU time to Router completion: 8 secs 
+Total CPU time to Router completion: 7 secs 
 
 Partition Implementation Status
 -------------------------------

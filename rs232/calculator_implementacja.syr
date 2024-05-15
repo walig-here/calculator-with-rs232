@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.19 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: calculator_implementacja.prj
 
@@ -104,98 +104,108 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/modulo10_counter.vhd" in Library work.
-Architecture behavioral of Entity modulo10_counter is up to date.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/divider_50MHz_to_115200Hz.vhd" in Library work.
-Architecture behavioral of Entity divider_50mhz_to_115200hz is up to date.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/sent_digits_counter.vhd" in Library work.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/modulo10_counter.vhd" in Library work.
+Entity <modulo10_counter> compiled.
+Entity <modulo10_counter> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/divider_50MHz_to_115200Hz.vhd" in Library work.
+Entity <divider_50MHz_to_115200Hz> compiled.
+Entity <divider_50MHz_to_115200Hz> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/sent_digits_counter.vhd" in Library work.
 Entity <sent_digits_counter> compiled.
-Entity <sent_digits_counter> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_2_synchronized.vhd" in Library work.
-Architecture behavioral of Entity register_2_synchronized is up to date.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/ascii_to_calc_symbol.vhd" in Library work.
-Architecture behavioral of Entity ascii_to_calc_symbol is up to date.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/output_transcoder.vhd" in Library work.
-Architecture behavioral of Entity output_transcoder is up to date.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_12_synchronized.vhd" in Library work.
-Architecture behavioral of Entity register_12_synchronized is up to date.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_receiver.vhd" in Library work.
-Architecture behavioral of Entity rs232_receiver is up to date.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator.vhd" in Library work.
+Entity <sent_digits_counter> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_2_synchronized.vhd" in Library work.
+Entity <register_2_synchronized> compiled.
+Entity <register_2_synchronized> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/ascii_to_calc_symbol.vhd" in Library work.
+Entity <ascii_to_calc_symbol> compiled.
+Entity <ascii_to_calc_symbol> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/output_transcoder.vhd" in Library work.
+Entity <output_transcoder> compiled.
+Entity <output_transcoder> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_12_synchronized.vhd" in Library work.
+Entity <register_12_synchronized> compiled.
+Entity <register_12_synchronized> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_receiver.vhd" in Library work.
+Entity <rs232_receiver> compiled.
+Entity <rs232_receiver> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.vhd" in Library work.
 Entity <calculator> compiled.
-Entity <calculator> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_transmitter.vhd" in Library work.
-Architecture behavioral of Entity rs232_transmitter is up to date.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/impulse_generator.vhd" in Library work.
-Architecture behavioral of Entity impulse_generator is up to date.
-Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja.vhf" in Library work.
-Architecture behavioral of Entity calculator_implementacja is up to date.
+Entity <calculator> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_transmitter.vhd" in Library work.
+Entity <rs232_transmitter> compiled.
+Entity <rs232_transmitter> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/impulse_generator.vhd" in Library work.
+Entity <impulse_generator> compiled.
+Entity <impulse_generator> (Architecture <Behavioral>) compiled.
+Compiling vhdl file "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.vhf" in Library work.
+Entity <calculator_implementacja> compiled.
+Entity <calculator_implementacja> (Architecture <BEHAVIORAL>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
-Analyzing hierarchy for entity <calculator_implementacja> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <calculator_implementacja> in library <work> (architecture <BEHAVIORAL>).
 
-Analyzing hierarchy for entity <rs232_receiver> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <rs232_receiver> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <calculator> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <calculator> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <rs232_transmitter> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <rs232_transmitter> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <impulse_generator> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <impulse_generator> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <modulo10_counter> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <modulo10_counter> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <divider_50MHz_to_115200Hz> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <divider_50MHz_to_115200Hz> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <sent_digits_counter> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <sent_digits_counter> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <register_2_synchronized> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <register_2_synchronized> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <ascii_to_calc_symbol> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <ascii_to_calc_symbol> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <output_transcoder> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <output_transcoder> in library <work> (architecture <Behavioral>).
 
-Analyzing hierarchy for entity <register_12_synchronized> in library <work> (architecture <behavioral>).
+Analyzing hierarchy for entity <register_12_synchronized> in library <work> (architecture <Behavioral>).
 
 
 =========================================================================
 *                            HDL Analysis                               *
 =========================================================================
-Analyzing Entity <calculator_implementacja> in library <work> (Architecture <behavioral>).
+Analyzing Entity <calculator_implementacja> in library <work> (Architecture <BEHAVIORAL>).
 Entity <calculator_implementacja> analyzed. Unit <calculator_implementacja> generated.
 
-Analyzing Entity <rs232_receiver> in library <work> (Architecture <behavioral>).
+Analyzing Entity <rs232_receiver> in library <work> (Architecture <Behavioral>).
 Entity <rs232_receiver> analyzed. Unit <rs232_receiver> generated.
 
-Analyzing Entity <modulo10_counter> in library <work> (Architecture <behavioral>).
+Analyzing Entity <modulo10_counter> in library <work> (Architecture <Behavioral>).
 Entity <modulo10_counter> analyzed. Unit <modulo10_counter> generated.
 
-Analyzing Entity <divider_50MHz_to_115200Hz> in library <work> (Architecture <behavioral>).
+Analyzing Entity <divider_50MHz_to_115200Hz> in library <work> (Architecture <Behavioral>).
 Entity <divider_50MHz_to_115200Hz> analyzed. Unit <divider_50MHz_to_115200Hz> generated.
 
-Analyzing Entity <calculator> in library <work> (Architecture <behavioral>).
+Analyzing Entity <calculator> in library <work> (Architecture <Behavioral>).
 Entity <calculator> analyzed. Unit <calculator> generated.
 
-Analyzing Entity <sent_digits_counter> in library <work> (Architecture <behavioral>).
+Analyzing Entity <sent_digits_counter> in library <work> (Architecture <Behavioral>).
 Entity <sent_digits_counter> analyzed. Unit <sent_digits_counter> generated.
 
-Analyzing Entity <register_2_synchronized> in library <work> (Architecture <behavioral>).
+Analyzing Entity <register_2_synchronized> in library <work> (Architecture <Behavioral>).
 Entity <register_2_synchronized> analyzed. Unit <register_2_synchronized> generated.
 
-Analyzing Entity <ascii_to_calc_symbol> in library <work> (Architecture <behavioral>).
+Analyzing Entity <ascii_to_calc_symbol> in library <work> (Architecture <Behavioral>).
 Entity <ascii_to_calc_symbol> analyzed. Unit <ascii_to_calc_symbol> generated.
 
-Analyzing Entity <output_transcoder> in library <work> (Architecture <behavioral>).
+Analyzing Entity <output_transcoder> in library <work> (Architecture <Behavioral>).
 Entity <output_transcoder> analyzed. Unit <output_transcoder> generated.
 
-Analyzing Entity <register_12_synchronized> in library <work> (Architecture <behavioral>).
+Analyzing Entity <register_12_synchronized> in library <work> (Architecture <Behavioral>).
 Entity <register_12_synchronized> analyzed. Unit <register_12_synchronized> generated.
 
-Analyzing Entity <rs232_transmitter> in library <work> (Architecture <behavioral>).
+Analyzing Entity <rs232_transmitter> in library <work> (Architecture <Behavioral>).
 Entity <rs232_transmitter> analyzed. Unit <rs232_transmitter> generated.
 
-Analyzing Entity <impulse_generator> in library <work> (Architecture <behavioral>).
+Analyzing Entity <impulse_generator> in library <work> (Architecture <Behavioral>).
 Entity <impulse_generator> analyzed. Unit <impulse_generator> generated.
 
 
@@ -206,7 +216,7 @@ Entity <impulse_generator> analyzed. Unit <impulse_generator> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <impulse_generator>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/impulse_generator.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/impulse_generator.vhd".
     Found 1-bit register for signal <current_state<0>>.
     Found 1-bit register for signal <internal_output_impulse>.
     Summary:
@@ -215,7 +225,7 @@ Unit <impulse_generator> synthesized.
 
 
 Synthesizing Unit <modulo10_counter>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/modulo10_counter.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/modulo10_counter.vhd".
     Found 4-bit up counter for signal <i>.
     Summary:
 	inferred   1 Counter(s).
@@ -223,7 +233,7 @@ Unit <modulo10_counter> synthesized.
 
 
 Synthesizing Unit <divider_50MHz_to_115200Hz>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/divider_50MHz_to_115200Hz.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/divider_50MHz_to_115200Hz.vhd".
     Found 16-bit register for signal <ticks_counter>.
     Found 15-bit adder for signal <ticks_counter_14_0$add0000> created at line 58.
     Found 15-bit comparator greater for signal <ticks_counter_15$cmp_gt0000> created at line 55.
@@ -235,7 +245,7 @@ Unit <divider_50MHz_to_115200Hz> synthesized.
 
 
 Synthesizing Unit <sent_digits_counter>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/sent_digits_counter.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/sent_digits_counter.vhd".
     Found 2-bit up counter for signal <i>.
     Summary:
 	inferred   1 Counter(s).
@@ -243,7 +253,7 @@ Unit <sent_digits_counter> synthesized.
 
 
 Synthesizing Unit <register_2_synchronized>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_2_synchronized.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_2_synchronized.vhd".
     Found 2-bit register for signal <data_register>.
     Summary:
 	inferred   2 D-type flip-flop(s).
@@ -251,12 +261,12 @@ Unit <register_2_synchronized> synthesized.
 
 
 Synthesizing Unit <ascii_to_calc_symbol>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/ascii_to_calc_symbol.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/ascii_to_calc_symbol.vhd".
 Unit <ascii_to_calc_symbol> synthesized.
 
 
 Synthesizing Unit <output_transcoder>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/output_transcoder.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/output_transcoder.vhd".
     Found 16x8-bit ROM for signal <ascii_output>.
     Summary:
 	inferred   1 ROM(s).
@@ -264,7 +274,7 @@ Unit <output_transcoder> synthesized.
 
 
 Synthesizing Unit <register_12_synchronized>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/register_12_synchronized.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/register_12_synchronized.vhd".
     Found 12-bit register for signal <data_register>.
     Summary:
 	inferred  12 D-type flip-flop(s).
@@ -272,7 +282,7 @@ Unit <register_12_synchronized> synthesized.
 
 
 Synthesizing Unit <rs232_receiver>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_receiver.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_receiver.vhd".
     Found 1-bit register for signal <current_state<0>>.
     Found 8-bit register for signal <data_register>.
     Summary:
@@ -281,7 +291,7 @@ Unit <rs232_receiver> synthesized.
 
 
 Synthesizing Unit <calculator>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator.vhd".
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 5                                              |
@@ -307,7 +317,7 @@ Unit <calculator> synthesized.
 
 
 Synthesizing Unit <rs232_transmitter>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/rs232_transmitter.vhd".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/rs232_transmitter.vhd".
     Found 1-bit register for signal <current_state<0>>.
     Found 10-bit register for signal <data_register>.
     Summary:
@@ -316,7 +326,7 @@ Unit <rs232_transmitter> synthesized.
 
 
 Synthesizing Unit <calculator_implementacja>.
-    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja.vhf".
+    Related source file is "C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.vhf".
 Unit <calculator_implementacja> synthesized.
 
 
@@ -744,11 +754,11 @@ Offset:              5.486ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.28 secs
+Total CPU time to Xst completion: 8.13 secs
  
 --> 
 
-Total memory usage is 4531068 kilobytes
+Total memory usage is 4531124 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

@@ -1,6 +1,0 @@
-[Inputs]
-input_signal
-clock
-[Outputs]
-output_impulse
-[BiDir]

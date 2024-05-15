@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : calculator_implementacja.vhf
--- /___/   /\     Timestamp : 05/15/2024 16:16:59
+-- /___/   /\     Timestamp : 05/15/2024 18:51:32
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja.vhf -w C:/Users/Dawid/Desktop/calculator-with-rs232-main/rs232/calculator_implementacja.sch
+--Command: sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.vhf -w C:/Users/Dawid/Desktop/calculator-with-rs232/rs232/calculator_implementacja.sch
 --Design Name: calculator_implementacja
 --Device: spartan3e
 --Purpose:
