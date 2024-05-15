@@ -18,7 +18,7 @@ Projekt zostanie zrealizowany przy pomocy języka `VHDL` i środowiska _Xilinx I
 - [x] Symulacja zaprojektowanego odbiornika.
 - [x] Przetestowanie działania odbiornika na płytce.
 - [ ] Zaprojektowanie maszyny stanów będącej prostym kalkulatorem 3-cyfrowych liczb heksadecymalnych. Na płytkę przez port RS232 nadawane są kolejno: argument 1, operator, agrument 2. Po przesłaniu `ENTER` na port RS232 ma zostać wysłany wynik działania. Wynik poprzedniej operacji nie jest domyślnie traktowany jako pierwsyz argument następnej operacji.
-  - [ ] Dodawanie
-  - [ ] Odejmowanie
-- [ ] Symulacja zaprojektowanego kalkulatora.
+  - [x] Dodawanie
+  - [x] Odejmowanie
+- [x] Symulacja zaprojektowanego kalkulatora.
 - [ ] Przetestowanie działania kalkulatora na płytce.
