@@ -21,4 +21,4 @@ Projekt zostanie zrealizowany przy pomocy języka `VHDL` i środowiska _Xilinx I
   - [x] Dodawanie
   - [x] Odejmowanie
 - [x] Symulacja zaprojektowanego kalkulatora.
-- [ ] Przetestowanie działania kalkulatora na płytce.
+- [x] Przetestowanie działania kalkulatora na płytce.
